@@ -1,0 +1,1000 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../estrategias/">
+      
+      
+        <link rel="next" href="../cronograma/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Engenharia de Requisitos - MicroData</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#engenharia-de-requisitos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MicroData" class="md-header__button md-logo" aria-label="MicroData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MicroData
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Engenharia de Requisitos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-MicroData" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2024.2-T03-MicroData
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MicroData" class="md-nav__button md-logo" aria-label="MicroData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MicroData
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-MicroData" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2024.2-T03-MicroData
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pagina Inicial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cenario_cliente/cenario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cenário atual do cliente e do Negócio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visão do Produto e Projeto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Visão do Produto e Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao_do_produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solução Proposta
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estrategias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estratégias de Engenharia de Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Engenharia de Requisitos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Engenharia de Requisitos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#atividades-e-tecnicas-de-er" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atividades e técnicas de ER
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atividades e técnicas de ER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-elicitacao-e-descoberta" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Elicitação e Descoberta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-analise-e-consenso" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Análise e Consenso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-declaracao-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Declaração de Requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-representacao-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Representação de Requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-verificacao-e-validacao-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Verificação e Validação de Requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-organizacao-e-atualizacao-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Organização e Atualização de Requisitos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#engenharia-de-requisitos-e-o-rad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Engenharia de Requisitos e o RAD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cronograma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cronograma e Entregas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interação entre Equipe e Cliente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitos_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos de Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dor_dod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DoR e DoD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog_produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog do Produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lições Aprendidas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../especificacao_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação dos Requisitos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entregas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entregas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#atividades-e-tecnicas-de-er" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atividades e técnicas de ER
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atividades e técnicas de ER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-elicitacao-e-descoberta" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Elicitação e Descoberta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-analise-e-consenso" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Análise e Consenso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-declaracao-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Declaração de Requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-representacao-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Representação de Requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-verificacao-e-validacao-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Verificação e Validação de Requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-organizacao-e-atualizacao-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Organização e Atualização de Requisitos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#engenharia-de-requisitos-e-o-rad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Engenharia de Requisitos e o RAD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="engenharia-de-requisitos">ENGENHARIA DE REQUISITOS</h1>
+<h2 id="atividades-e-tecnicas-de-er">Atividades e técnicas de ER</h2>
+<h3 id="1-elicitacao-e-descoberta">1. Elicitação e Descoberta</h3>
+<p><strong>Análise Documental</strong>: Utilizar para revisar documentos existentes que fornecem informações sobre o domínio do problema, requisitos anteriores ou projetos similares, a fim de identificar necessidades e soluções já propostas.</p>
+<p><strong>Entrevista</strong>: Realizar para obter informações diretamente dos stakeholders, identificando necessidades, expectativas e limitações iniciais para o produto, com perguntas estruturadas e semi-estruturadas para capturar dados relevantes.</p>
+<hr />
+<h3 id="2-analise-e-consenso">2. Análise e Consenso</h3>
+<p><strong>Brainstorming</strong>: Facilitar a geração rápida de ideias entre os stakeholders, promovendo a identificação de possíveis requisitos e soluções inovadoras em um ambiente colaborativo.</p>
+<p><strong>Priorização</strong>: Utilizar para classificar os requisitos conforme sua importância e urgência, garantindo que as funcionalidades mais críticas sejam tratadas primeiro.</p>
+<p><strong>Entrevista</strong>: Aplicar novamente para aprofundar a compreensão das necessidades dos stakeholders e obter mais informações detalhadas sobre os requisitos.</p>
+<p><strong>Análise de Viabilidade</strong>: Realizar para avaliar a viabilidade técnica e econômica das funcionalidades propostas, garantindo que os requisitos sejam realistas dentro dos recursos disponíveis.</p>
+<p><strong>Negociação</strong>: Utilizar para resolver conflitos e alcançar um acordo entre os stakeholders sobre as prioridades e funcionalidades do sistema.</p>
+<p><strong>Reuniões de Alinhamento</strong>: Conduzir para garantir que todos os envolvidos no projeto compartilhem a mesma visão sobre os requisitos e as expectativas.</p>
+<hr />
+<h3 id="3-declaracao-de-requisitos">3. Declaração de Requisitos</h3>
+<p><strong>Priorização</strong>: Aplicar para garantir que os requisitos sejam organizados de acordo com seu impacto e valor para o projeto, permitindo que a equipe foque nas necessidades mais importantes.</p>
+<p><strong>User Stories</strong>: Representar cada requisito como uma história do usuário, descrevendo o papel, a necessidade e o benefício esperado, facilitando a comunicação clara entre as partes interessadas.</p>
+<p><strong>Prototipagem</strong>: Criar modelos de baixa fidelidade para validar rapidamente com os stakeholders se as funcionalidades propostas estão alinhadas às expectativas.</p>
+<hr />
+<h3 id="4-representacao-de-requisitos">4. Representação de Requisitos</h3>
+<p><strong>User Stories</strong>: Utilizar para descrever os requisitos do sistema de forma simples e compreensível, focando nas necessidades e benefícios esperados dos usuários finais.</p>
+<p><strong>Cenários</strong>: Aplicar para detalhar as histórias do usuário em situações específicas, descrevendo como o sistema deve se comportar em diferentes contextos de uso, ajudando a esclarecer os requisitos e validar as funcionalidades.</p>
+<p><strong>Prototipagem</strong>: Criar protótipos de baixa fidelidade, permitindo testes rápidos com os stakeholders e ajustes nas funcionalidades antes do desenvolvimento.</p>
+<hr />
+<h3 id="5-verificacao-e-validacao-de-requisitos">5. Verificação e Validação de Requisitos</h3>
+<p><strong>Revisão por Pares e Checklists</strong>: Utilizar para verificar se os requisitos estão completos, consistentes e livres de erros, com a colaboração de membros da equipe para garantir a qualidade.</p>
+<p><strong>Walkthrough</strong>: Conduzir sessões de walkthrough para apresentar os requisitos e protótipos aos stakeholders, recebendo feedback para ajustes antes do desenvolvimento.</p>
+<hr />
+<h3 id="6-organizacao-e-atualizacao-de-requisitos">6. Organização e Atualização de Requisitos</h3>
+<p><strong>Revisões de Lista de Requisitos</strong>: Realizar para manter a lista de requisitos atualizada e garantir que todos os requisitos foram revisados e aprovados antes da implementação.</p>
+<p><strong>Grooming do Backlog</strong>: Realizar sessões de grooming para revisar, refinar e priorizar os itens no backlog, garantindo que ele esteja alinhado com os objetivos do projeto e as expectativas dos stakeholders.</p>
+<p><strong>Reunião de Encerramento</strong>: Conduzir uma reunião final para revisar o trabalho realizado, garantir que todos os requisitos foram atendidos e fechar oficialmente a fase de requisitos do projeto.</p>
+<h2 id="engenharia-de-requisitos-e-o-rad">Engenharia de Requisitos e o RAD</h2>
+<table border="1" cellspacing="0" cellpadding="5">
+  <thead>
+    <tr>
+      <th style="text-align: center; vertical-align: middle;">Fases do RAD</th>
+      <th style="text-align: center; vertical-align: middle;">Atividades da ER</th>
+      <th style="text-align: center; vertical-align: middle;">Prática</th>
+      <th style="text-align: center; vertical-align: middle;">Técnica</th>
+      <th style="text-align: center; vertical-align: middle;">Resultado Esperado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Planejamento de Requisitos -->
+    <tr>
+      <td rowspan="7" style="text-align: center; vertical-align: middle;"><strong>Planejamento de Requisitos</strong></td>
+      <td style="text-align: center; vertical-align: middle;">Elicitação e Descoberta</td>
+      <td style="text-align: center; vertical-align: middle;">Levantamento de Requisitos</td>
+      <td style="text-align: center; vertical-align: middle;">Análise Documental e Entrevista</td>
+      <td style="text-align: center; vertical-align: middle;">Visão de Produto</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">Análise e Consenso</td>
+      <td style="text-align: center; vertical-align: middle;">Priorização de Requisitos</td>
+      <td style="text-align: center; vertical-align: middle;">Brainstorming, Priorização, Entrevista, Análise de Viabilidade e Negociação</td>
+      <td style="text-align: center; vertical-align: middle;">Escopo e funcionalidades priorizadas e acordadas</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">Declaração</td>
+      <td style="text-align: center; vertical-align: middle;">Descrição dos Requisitos</td>
+      <td style="text-align: center; vertical-align: middle;">Priorização e User Stories</td>
+      <td style="text-align: center; vertical-align: middle;">Documentação de Requisitos de software</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;" rowspan="2">Verificação e validação</td>
+      <td style="text-align: center; vertical-align: middle;">Verificação</td>
+      <td style="text-align: center; vertical-align: middle;">Revisão por pares e Checklists</td>
+      <td style="text-align: center; vertical-align: middle;" rowspan="2">DoD, DoR e Feedback</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">Validação</td>
+      <td style="text-align: center; vertical-align: middle;">Walkthrough</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">Representação</td>
+      <td style="text-align: center; vertical-align: middle;">Confecção de artefatos</td>
+      <td style="text-align: center; vertical-align: middle;">User Stories e Cenários</td>
+      <td style="text-align: center; vertical-align: middle;">Representações formais</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">Organização e Atualização</td>
+      <td style="text-align: center; vertical-align: middle;">Revisões periódicas</td>
+      <td style="text-align: center; vertical-align: middle;">Revisões de lista de requisitos</td>
+      <td style="text-align: center; vertical-align: middle;">Backlog atualizado e alinhado</td>
+    </tr>
+    <!-- User Design -->
+    <tr>
+      <td rowspan="4" style="text-align: center; vertical-align: middle;"><strong>User Design</strong></td>
+      <td style="text-align: center; vertical-align: middle;">Análise e Consenso</td>
+      <td style="text-align: center; vertical-align: middle;">Avaliação de funcionalidades e protótipos</td>
+      <td style="text-align: center; vertical-align: middle;">Reuniões de Alinhamento</td>
+      <td style="text-align: center; vertical-align: middle;">Feedback coletado e consenso sobre alterações no protótipo</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">Declaração</td>
+      <td style="text-align: center; vertical-align: middle;">Prototipação de Baixa fidelidade</td>
+      <td style="text-align: center; vertical-align: middle;">Prototipagem</td>
+      <td style="text-align: center; vertical-align: middle;">Ideia do fluxo de telas desejado pelo cliente e como isso refletirá no protótipo de alta fidelidade</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">Representação</td>
+      <td style="text-align: center; vertical-align: middle;">Prototipação de Alta Fidelidade</td>
+      <td style="text-align: center; vertical-align: middle;">Prototipagem</td>
+      <td style="text-align: center; vertical-align: middle;">Protótipos de alta fidelidade e fluxo de telas da aplicação</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">Verificação e validação</td>
+      <td style="text-align: center; vertical-align: middle;">Revisão Iterativa</td>
+      <td style="text-align: center; vertical-align: middle;">Walkthroughs, Checklists</td>
+      <td style="text-align: center; vertical-align: middle;">Protótipo ajustado para refletir melhor os objetivos</td>
+    </tr>
+    <!-- Desenvolvimento e Testes -->
+    <tr>
+      <td style="text-align: center; vertical-align: middle;"><strong>Desenvolvimento e testes</strong></td>
+      <td style="text-align: center; vertical-align: middle;">Organização e Atualização</td>
+      <td style="text-align: center; vertical-align: middle;">Revisão Contínua</td>
+      <td style="text-align: center; vertical-align: middle;">Grooming do Backlog</td>
+      <td style="text-align: center; vertical-align: middle;">Backlog refinado com atualizações baseadas nos testes e feedback</td>
+    </tr>
+    <!-- Finalização e Entrega -->
+    <tr>
+      <td style="text-align: center; vertical-align: middle;"><strong>Finalização e entrega</strong></td>
+      <td style="text-align: center; vertical-align: middle;">Organização e Atualização</td>
+      <td style="text-align: center; vertical-align: middle;">Atualização do Backlog</td>
+      <td style="text-align: center; vertical-align: middle;">Reunião de Encerramento</td>
+      <td style="text-align: center; vertical-align: middle;">Backlog encerrado, rastreabilidade completa dos requisitos, deploy da aplicação e implementação do MVP1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Data</strong></th>
+<th style="text-align: center;"><strong>Versão</strong></th>
+<th style="text-align: center;"><strong>Descrição</strong></th>
+<th style="text-align: center;"><strong>Autor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">15/12/2024</td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">Criação do documento</td>
+<td style="text-align: center;">Renan Vieira</td>
+</tr>
+<tr>
+<td style="text-align: center;">15/12/2024</td>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">Texto sobre as ténicas escolhidas para cada atividade</td>
+<td style="text-align: center;">Renan Vieira</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
