@@ -17,44 +17,44 @@ A **Confirmação** refere-se aos critérios que determinam se a história foi i
 ## Backlog do projeto Microdata
 A especificação de funcionalidades segue o framework de User Stories (Histórias de usuário); cada épico levantado no backlog deu origem a uma história de usuário e seu respectivo índice. Segue abaixo a tabela com os temas, épicos e suas respectivas user stories:
 
-| INDEX  | TEMA                               | ÉPICO                                             | US                                                                                                                                         |
-|--------|------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| RF-01  | ACESSO E LOGIN                    | CADASTRAR USUÁRIO                                | Eu como usuário quero cadastrar uma conta para de minhas informações no sistema.                                                         |
-| RF-02  | ACESSO E LOGIN                    | LOGAR USUÁRIO                                    | Eu como usuário quero realizar login na conta cadastrada para ter acesso aos recursos e funcionalidades da plataforma.                    |
-| RF-03  | ACESSO E LOGIN                    | VISUALIZAR USUÁRIO                               | Eu como usuário quero visualizar meus dados cadastrais para verificar as informações imputadas no sistema.                                |
-| RF-04  | ACESSO E LOGIN                    | EDITAR USUÁRIO                                   | Eu como usuário poderia editar meus dados cadastrais para gerenciamento de erros de registro e atualização de informações.                |
-| RF-05  | ACESSO E LOGIN                    | DESATIVAR USUÁRIO                                | Eu como usuário poderia desativar o meu cadastro no sistema para os casos de desligamento com a empresa / área.                          |
-| RF-06  | ACESSO E LOGIN                    | RECUPERAR SENHA DE USUÁRIO                       | Eu como usuário devo conseguir recuperar uma senha cadastrada para eventuais situações de esquecimento das informações de acesso.         |
-| RF-07  | MICROORGANISMOS                   | CADASTRAR MICROORGANISMOS OBSERVADOS            | Eu como usuário, quero cadastrar no sistema um microrganismo observado pelo programa para que eu possa registrar informações detalhadas. |
-| RF-08  | MICROORGANISMOS                   | LISTAR MICROORGANISMOS OBSERVADOS               | Eu como usuário, quero listar os microorganismos observados pelo programa a fim de visualizar os microrganismos cadastrados no sistema.  |
-| RF-09  | MICROORGANISMOS                   | EDITAR MICROORGANISMOS OBSERVADOS               | Eu como usuário, quero editar os registros de microorganismos cadastrados a fim de gerenciamento de erros de registro.                   |
-| RF-10  | MICROORGANISMOS                   | DESATIVAR MICROORGANISMOS OBSERVADOS            | Eu como usuário quero poder desativar algum microorganismo cadastrado no sistema a fim de remover aqueles que já tiveram seus dados adquiridos. |
-| RF-11  | MICROORGANISMOS                   | INSERIR NIVEIS DE ALERTA DA CONTAGEM            | Eu como usuário, quero poder ver níveis de alerta a respeito da contagem de microorganismos a fim de ser notificado de resultados inesperados. |
-| RF-12  | MICROORGANISMOS                   | BUSCAR MICROORGANISMOS OBSERVADOS               | Eu como usuário, quero buscar microoranismos cadastrados no sistema para encontrar rapidamente o local desejado de forma eficiente.       |
-| RF-13  | PONTOS (LOCAIS) AVALIADOS         | CADASTRAR LOCAIS DE COLETA AVALIADOS            | Eu como usuário, quero cadastrar os locais de coleta microbiológica a fim de acompanhar as contagens de microrganismos presentes.         |
-| RF-14  | PONTOS (LOCAIS) AVALIADOS         | LISTAR LOCAIS DE COLETA AVALIADOS               | Eu como usuário, quero listar todos os locais de coleta cadastrados no sistema a fim de visualizar os registros de pontos do monitoramento. |
-| RF-15  | PONTOS (LOCAIS) AVALIADOS         | EDITAR LOCAIS DE COLETA AVALIADOS               | Eu como usuário, quero editar os locais de coleta cadastrados no sistema a fim de adicionar ou retirar dados pertinentes.                 |
-| RF-16  | PONTOS (LOCAIS) AVALIADOS         | DESATIVAR LOCAIS DE COLETA AVALIADOS            | Eu como usuário, quero desativar locais de coleta cadastrados no sistema para remover aqueles que não serão mais utilizados.              |
-| RF-17  | PONTOS (LOCAIS) AVALIADOS         | BUSCAR LOCAIS DE COLETA AVALIADOS               | Eu como usuário, quero buscar locais cadastrados no sistema para encontrar rapidamente o local desejado de forma eficiente.               |
-| RF-18  | RESULTADOS DO MONITORAMENTO       | ADICIONAR A CONTAGEM DE MICROORGANISMOS         | Eu como usuário, quero registrar a contagem de microrganismos de uma dada coleta para registrar informações detalhadas.                   |
-| RF-19  | RESULTADOS DO MONITORAMENTO       | LISTAR A CONTAGEM DE MICROORGANISMOS            | Eu como usuário, quero listar as contagens de microrganismos registradas para análise organizada.                                         |
-| RF-20  | RESULTADOS DO MONITORAMENTO       | EDITAR O REGISTRO DE CONTAGEM                   | Eu como usuário quero editar o registro de contagem de microrganismos para corrigir erros ou atualizar informações relevantes.           |
-| RF-21  | RESULTADOS DO MONITORAMENTO       | INSERIR AÇÕES CORRETIVAS                        | Eu como usuário devo inserir ações corretivas para resultados acima do limite de contagem para registro de controle mais efetivo.        |
-| RF-22  | RESULTADOS DO MONITORAMENTO       | FILTRAR UM RESULTADO DE COLETA                  | Eu como usuário, quero aplicar filtros aos resultados de coleta microbiológica para localizar informações específicas.                   |
-| RF-23  | DASHBOARD                         | VISUALIZAR RESULTADOS DOS PONTOS               | Como usuário, quero visualizar no dashboard os resultados de coleta para cada ponto.                                                     |
-| RF-24  | DASHBOARD                         | VISUALIZAR PONTOS ACIMA DO LIMITE               | Como usuário, quero que o dashboard destaque os pontos que excederem o limite de contagem.                                               |
-| RF-25  | DASHBOARD                         | VISUALIZAR RESULTADOS POR NÍVEL DE ALERTA       | Como usuário, quero visualizar os resultados agrupados por nível de alerta para facilitar a análise.                                     |
-| RF-26  | DASHBOARD                         | FILTRAR RESULTADOS POR MICROORGANISMO          | Como usuário, quero filtrar os resultados por micro-organismo, para avaliar padrões específicos.                                         |
-| RF-27  | DASHBOARD                         | FILTRAR RESULTADOS POR LOCAL                   | Como usuário, quero filtrar os resultados por local de coleta, para analisar os dados de uma área específica.                            |
-| RF-28  | DASHBOARD                         | FILTRAR RESULTADOS POR PERÍODO                 | Como usuário, quero filtrar os resultados por período de tempo, para entender variações ao longo de intervalos.                          |
-| RF-29  | LOCALIZAÇÃO DE INFORMAÇÕES        | INSERIR A PLANTA BAIXA                          | Como usuário, eu quero inserir a planta baixa para referência dos locais de coleta.                                                     |
-| RF-30  | LOCALIZAÇÃO DE INFORMAÇÕES        | EXCLUIR A PLANTA BAIXA                          | Como usuário, eu quero excluir uma planta baixa cadastrada para atualizar ou remover informações desatualizadas.                        |
-| RF-31  | LOCALIZAÇÃO DE INFORMAÇÕES        | DELIMITAR OS LOCAIS DE COLETA                  | Como usuário eu quero delimitar os locais de coleta na planta baixa.                                                                     |
-| RF-32  | LOCALIZAÇÃO DE INFORMAÇÕES        | APRESENTAR LOCAIS ATIVOS                        | Como usuário, eu quero visualizar locais ativos em um determinado período na planta baixa.                                               |
-| RF-33  | LOCALIZAÇÃO DE INFORMAÇÕES        | LISTAR MICROORGANISMOS POR OPERADOR            | Como usuário, eu quero listar a contagem de microrganismos identificados por operador.                                                   |
-| RF-34  | LOCALIZAÇÃO DE INFORMAÇÕES        | HISTÓRICO DE MODIFICAÇÕES                       | Como auditor ou usuário, eu quero visualizar o histórico de modificações para rastreabilidade.                                           |
-| RF-35  | LOCALIZAÇÃO DE INFORMAÇÕES        | INSERIR IMAGEM DE LOCAIS                        | Como operador ou administrador, eu quero inserir uma imagem do local de coleta para facilitar o dia a dia.                              |
-| RF-36  | LOCALIZAÇÃO DE INFORMAÇÕES        | EXCLUIR IMAGEM DE LOCAIS                        | Como operador ou administrador, eu quero excluir uma imagem para remover informações incorretas ou desatualizadas.                      |
+| INDEX  | ÉPICO                               | US                                                                                                                                         |
+|--------|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| RF-01  | ACESSO E LOGIN                    | Eu como usuário quero cadastrar uma conta para de minhas informações no sistema.                                                         |
+| RF-02  | ACESSO E LOGIN                    | Eu como usuário quero realizar login na conta cadastrada para ter acesso aos recursos e funcionalidades da plataforma.                    |
+| RF-03  | ACESSO E LOGIN                    | Eu como usuário quero visualizar meus dados cadastrais para verificar as informações imputadas no sistema.                                |
+| RF-04  | ACESSO E LOGIN                    | Eu como usuário poderia editar meus dados cadastrais para gerenciamento de erros de registro e atualização de informações.                |
+| RF-05  | ACESSO E LOGIN                    | Eu como usuário poderia desativar o meu cadastro no sistema para os casos de desligamento com a empresa / área.                          |
+| RF-06  | ACESSO E LOGIN                    | Eu como usuário devo conseguir recuperar uma senha cadastrada para eventuais situações de esquecimento das informações de acesso.         |
+| RF-07  | MICROORGANISMOS                   | Eu como usuário, quero cadastrar no sistema um microrganismo observado pelo programa para que eu possa registrar informações detalhadas. |
+| RF-08  | MICROORGANISMOS                   | Eu como usuário, quero listar os microorganismos observados pelo programa a fim de visualizar os microrganismos cadastrados no sistema.  |
+| RF-09  | MICROORGANISMOS                   | Eu como usuário, quero editar os registros de microorganismos cadastrados a fim de gerenciamento de erros de registro.                   |
+| RF-10  | MICROORGANISMOS                   | Eu como usuário quero poder desativar algum microorganismo cadastrado no sistema a fim de remover aqueles que já tiveram seus dados adquiridos. |
+| RF-11  | MICROORGANISMOS                   | Eu como usuário, quero poder ver níveis de alerta a respeito da contagem de microorganismos a fim de ser notificado de resultados inesperados. |
+| RF-12  | MICROORGANISMOS                   | Eu como usuário, quero buscar microoranismos cadastrados no sistema para encontrar rapidamente o local desejado de forma eficiente.       |
+| RF-13  | PONTOS (LOCAIS) AVALIADOS         | Eu como usuário, quero cadastrar os locais de coleta microbiológica a fim de acompanhar as contagens de microrganismos presentes.         |
+| RF-14  | PONTOS (LOCAIS) AVALIADOS         | Eu como usuário, quero listar todos os locais de coleta cadastrados no sistema a fim de visualizar os registros de pontos do monitoramento. |
+| RF-15  | PONTOS (LOCAIS) AVALIADOS         | Eu como usuário, quero editar os locais de coleta cadastrados no sistema a fim de adicionar ou retirar dados pertinentes.                 |
+| RF-16  | PONTOS (LOCAIS) AVALIADOS         | Eu como usuário, quero desativar locais de coleta cadastrados no sistema para remover aqueles que não serão mais utilizados.              |
+| RF-17  | PONTOS (LOCAIS) AVALIADOS         | Eu como usuário, quero buscar locais cadastrados no sistema para encontrar rapidamente o local desejado de forma eficiente.               |
+| RF-18  | RESULTADOS DO MONITORAMENTO       | Eu como usuário, quero registrar a contagem de microrganismos de uma dada coleta para registrar informações detalhadas.                   |
+| RF-19  | RESULTADOS DO MONITORAMENTO       | Eu como usuário, quero listar as contagens de microrganismos registradas para análise organizada.                                         |
+| RF-20  | RESULTADOS DO MONITORAMENTO       | Eu como usuário quero editar o registro de contagem de microrganismos para corrigir erros ou atualizar informações relevantes.           |
+| RF-21  | RESULTADOS DO MONITORAMENTO       | Eu como usuário devo inserir ações corretivas para resultados acima do limite de contagem para registro de controle mais efetivo.        |
+| RF-22  | RESULTADOS DO MONITORAMENTO       | Eu como usuário, quero aplicar filtros aos resultados de coleta microbiológica para localizar informações específicas.                   |
+| RF-23  | DASHBOARD                         | Como usuário, quero visualizar no dashboard os resultados de coleta para cada ponto.                                                     |
+| RF-24  | DASHBOARD                         | Como usuário, quero que o dashboard destaque os pontos que excederem o limite de contagem.                                               |
+| RF-25  | DASHBOARD                         | Como usuário, quero visualizar os resultados agrupados por nível de alerta para facilitar a análise.                                     |
+| RF-26  | DASHBOARD                         | Como usuário, quero filtrar os resultados por micro-organismo, para avaliar padrões específicos.                                         |
+| RF-27  | DASHBOARD                         | Como usuário, quero filtrar os resultados por local de coleta, para analisar os dados de uma área específica.                            |
+| RF-28  | DASHBOARD                         | Como usuário, quero filtrar os resultados por período de tempo, para entender variações ao longo de intervalos.                          |
+| RF-29  | LOCALIZAÇÃO DE INFORMAÇÕES        | Como usuário, eu quero inserir a planta baixa para referência dos locais de coleta.                                                     |
+| RF-30  | LOCALIZAÇÃO DE INFORMAÇÕES        | Como usuário, eu quero excluir uma planta baixa cadastrada para atualizar ou remover informações desatualizadas.                        |
+| RF-31  | LOCALIZAÇÃO DE INFORMAÇÕES        | Como usuário eu quero delimitar os locais de coleta na planta baixa.                                                                     |
+| RF-32  | LOCALIZAÇÃO DE INFORMAÇÕES        | Como usuário, eu quero visualizar locais ativos em um determinado período na planta baixa.                                               |
+| RF-33  | LOCALIZAÇÃO DE INFORMAÇÕES        | Como usuário, eu quero listar a contagem de microrganismos identificados por operador.                                                   |
+| RF-34  | LOCALIZAÇÃO DE INFORMAÇÕES        | Como auditor ou usuário, eu quero visualizar o histórico de modificações para rastreabilidade.                                           |
+| RF-35  | LOCALIZAÇÃO DE INFORMAÇÕES        | Como operador ou administrador, eu quero inserir uma imagem do local de coleta para facilitar o dia a dia.                              |
+| RF-36  | LOCALIZAÇÃO DE INFORMAÇÕES        | Como operador ou administrador, eu quero excluir uma imagem para remover informações incorretas ou desatualizadas.                      |
 
 ## Priorização do Backlog Geral
 O grupo realizou a priorização do backlog do projeto com base em três critérios principais: **valor de negócio**, **complexidade técnica** e i**ndependência de funcionalidades**.  Essa abordagem visa maximizar os resultados e otimizar o uso dos recursos disponíveis.
@@ -191,3 +191,4 @@ Em contrapartida, as funcionalidades que foram consideradas Incrementos são:
 | **Data** | **Versão** | **Descrição** | **Autor** |
 | :------: | :--------: | :----------:  | :-------: |
 | 20/11/2024| 2.0| Criação do documento | Breno Lucena, Breno Fernandes, Storch, João, Rafael e Renan |
+| 26/11/2024| 2.0| retirada da tabela TEMA e substituição do texto de ÉPICO | Breno Lucena, Breno Fernandes, Storch, João, Rafael e Renan |

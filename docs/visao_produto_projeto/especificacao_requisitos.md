@@ -2,9 +2,9 @@
 
 Abaixo estão os cartões e as confirmações das histórias selecionadas para o primeiro ciclo de desenvolvimento do projeto:
 
-## Épico 1: Cadastrar Usuários
+## Épico 1: ACESSO E LOGIN
 
-**US-01:** Eu como usuário quero cadastrar uma conta para de minhas informações no sistema.
+### **US-01(CADASTRAR USUÁRIO):** Eu como usuário quero cadastrar uma conta para de minhas informações no sistema.
 
 ### Cenário 1: Cadastro Completo com Sucesso
 - **Dado que** o usuário está na página de cadastro,
@@ -62,9 +62,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 2: Logar Usuário
 
-**US-02:** Eu como usuário quero realizar login na conta cadastrada para ter acesso aos recursos e funcionalidades da plataforma.
+
+### **US-02(LOGAR USUÁRIO):** Eu como usuário quero realizar login na conta cadastrada para ter acesso aos recursos e funcionalidades da plataforma.
 
 ### Cenário 1: Login Bem-Sucedido
 - **Dado que** o usuário está na página de login,
@@ -107,9 +107,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 3: Visualizar Usuário
 
-**US-03:** Eu como usuário quero visualizar meus dados cadastrais para verificar as informações imputadas no sistema.
+
+### **US-03(VISUALIZAR USUÁRIO):** Eu como usuário quero visualizar meus dados cadastrais para verificar as informações imputadas no sistema.
 
 ### Cenário 1: Usuário Visualiza Seus Dados Cadastrais
 - **Dado que** o usuário possui uma conta cadastrada e está autenticado na plataforma,
@@ -130,9 +130,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 4: Editar Usuário
 
-**US-04:** Eu como usuário poderia editar meus dados cadastrais para gerenciamento de erros de registro e atualização de informações.
+
+### **US-04(EDITAR USUÁRIO):** Eu como usuário poderia editar meus dados cadastrais para gerenciamento de erros de registro e atualização de informações.
 
 ### Cenário 1: Edição de Nome e Cargo com Sucesso
 - **Dado que** o usuário esteja autenticado e na página de edição de perfil,
@@ -157,9 +157,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 5: Desativar Usuário
 
-**US-05:** Eu como usuário poderia desativar o meu cadastro no sistema para os casos de desligamento com a empresa / área.
+
+### **US-05(DESATIVAR USUÁRIO):** Eu como usuário poderia desativar o meu cadastro no sistema para os casos de desligamento com a empresa / área.
 
 ### Cenário 1: Solicitação de Desativação
 - **Dado que** o usuário está autenticado no sistema,
@@ -189,9 +189,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 6: Recuperar Senha
 
-**US-06:** Eu como usuário devo conseguir recuperar uma senha cadastrada para eventuais situações de esquecimento das informações de acesso.
+
+### **US-06(RECUPERAR SENHA DE USUÁRIO):** Eu como usuário devo conseguir recuperar uma senha cadastrada para eventuais situações de esquecimento das informações de acesso.
 
 ### Cenário 1: Solicitação de Recuperação de Senha
 - **Dado que** o usuário está na tela de login e não se lembra da senha,
@@ -230,9 +230,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 7: Cadastrar Microorganismos Observados
+## Épico 2: MICROORGANISMOS
 
-**US-07:** Eu como usuário, quero cadastrar no sistema um microrganismo observado pelo programa para que eu possa registrar informações detalhadas e manter um histórico organizado para análise.
+### **US-07(CADASTRAR MICROORGANISMOS OBSERVADOS):** Eu como usuário, quero cadastrar no sistema um microrganismo observado pelo programa para que eu possa registrar informações detalhadas e manter um histórico organizado para análise.
 
 ### Cenário 1: O Usuário Realiza o Primeiro Cadastro de um Microorganismo no Banco
 - **Dado que** um usuário deseja cadastrar um microorganismo no banco,
@@ -258,9 +258,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 8: Listar Microorganismos Observados
 
-**US-08:** Eu como usuário, quero listar os microorganismos observados pelo programa a fim de visualizar os microrganismos cadastrados no sistema.
+
+### **US-08(LISTAR MICROORGANISMOS OBSERVADOS):** Eu como usuário, quero listar os microorganismos observados pelo programa a fim de visualizar os microrganismos cadastrados no sistema.
 
 ### Cenário 1: O Usuário Acessa os Registros de Microorganismos
 - **Dado que** um usuário deseja acessar os registros de microorganismos,
@@ -275,9 +275,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 9: Editar Microorganismos Observados
 
-**US-09:** Eu como usuário, quero editar os registros de microorganismos cadastrados a fim de gerenciamento de erros de registro e atualização de informações.
+
+### **US-09(EDITAR MICROORGANISMOS OBSERVADOS):** Eu como usuário, quero editar os registros de microorganismos cadastrados a fim de gerenciamento de erros de registro e atualização de informações.
 
 ### Cenário 1: O Usuário Tenta Editar uma Informação de um Microorganismo Cadastrado
 - **Dado que** um usuário acessa a informação de um microorganismo,
@@ -299,9 +299,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 10: Desativar Microorganismos Observados
 
-**US-10:** Eu como usuário quero poder desativar algum microorganismo cadastrado no sistema a fim de tornar obsoleto um microorganismo observado pelo programa.
+
+### **US-10(DESATIVAR MICROORGANISMOS OBSERVADOS):** Eu como usuário quero poder desativar algum microorganismo cadastrado no sistema a fim de tornar obsoleto um microorganismo observado pelo programa.
 
 ### Cenário 1: O Usuário é Notificado Sobre a Desativação do Microorganismo
 - **Dado que** o usuário acessa os registros de microorganismos observados,
@@ -318,9 +318,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 11: Inserir Níveis de Alerta da Contagem de Microorganismos
 
-**US-11:** Eu como usuário, quero poder ver níveis de alerta a respeito da contagem de microorganismos a fim de ser notificado quando a contagem não está de acordo com o resultado esperado.
+
+### **US-11(INSERIR NIVEIS DE ALERTA DA CONTAGEM):** Eu como usuário, quero poder ver níveis de alerta a respeito da contagem de microorganismos a fim de ser notificado quando a contagem não está de acordo com o resultado esperado.
 
 ### Cenário 1: O Usuário Insere os Níveis de Alerta do Microorganismo no Sistema
 - **Dado que** o usuário cadastra um microorganismo,
@@ -330,9 +330,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 12: Buscar Microorganismos Observados
 
-**US-12:** Eu como usuário, quero buscar microorganismos cadastrados no sistema para encontrar rapidamente o local desejado de forma eficiente.
+
+### **US-12(BUSCAR MICROORGANISMOS OBSERVADOS):** Eu como usuário, quero buscar microorganismos cadastrados no sistema para encontrar rapidamente o local desejado de forma eficiente.
 
 ### Cenário 1: O Usuário Busca um Registro de Microorganismo Específico
 - **Dado que** o usuário acessa os registros de microorganismos observados,
@@ -342,9 +342,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 13: Cadastrar Locais de Coleta Avaliados
+## Épico 3: PONTOS(LOCAIS) AVALIADOS
 
-**US-13:** Eu como usuário, quero cadastrar os locais de coleta microbiológica a fim de acompanhar as contagens de microrganismos presentes.
+### **US-13(CADASTRAR LOCAIS DE COLETA AVALIADOS):** Eu como usuário, quero cadastrar os locais de coleta microbiológica a fim de acompanhar as contagens de microrganismos presentes.
 
 ### Cenário 1:  usuário cadastra um ponto de coleta pela primeira vez
 - **Dado** que o usuário cadastra um local de coleta
@@ -363,9 +363,8 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 - **Então** o sistema deve apresentar uma notificação informando que o registro já existe na base de dados.
 ---
 
-## Épico 14: Listar Locais de Coleta Avaliados
 
-**US-14:** Eu como usuário, quero listar todos os locais de coleta cadastrados no sistema a fim de visualizar os registros de pontos do monitoramento.
+### **US-14(LISTAR LOCAIS DE COLETA AVALIADOS):** Eu como usuário, quero listar todos os locais de coleta cadastrados no sistema a fim de visualizar os registros de pontos do monitoramento.
 
 ### Cenário 1: O usuário acessa a página de registros para procurar por um ponto em específico
 - **Dado** que um usuário acessa a página de registros
@@ -374,9 +373,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 15: Editar Locais de Coleta Avaliados
 
-**US-15:** Eu como usuário, quero editar os locais de coleta cadastrados no sistema a fim de adicionar ou retirar dados pertinentes para a análise microbiológica.
+
+### **US-15(EDITAR LOCAIS DE COLETA AVALIADOS):** Eu como usuário, quero editar os locais de coleta cadastrados no sistema a fim de adicionar ou retirar dados pertinentes para a análise microbiológica.
 
 ### Cenário 1: Edição Bem-Sucedida
 - **Dado que** o usuário esteja autenticado e na página de edição de locais de coleta avaliados,
@@ -403,9 +402,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 16: Desativar Locais de Coleta Avaliados
 
-**US-16:** Eu como usuário, quero desativar locais de coleta cadastrados no sistema para remover aqueles que não serão mais utilizados na coleta microbiológica.
+
+### **US-16(DESATIVAR LOCAIS DE COLETA AVALIADOS):** Eu como usuário, quero desativar locais de coleta cadastrados no sistema para remover aqueles que não serão mais utilizados na coleta microbiológica.
 
 ### Cenário 1: Desativação Bem-Sucedida
 - **Dado que** o usuário esteja autenticado e na página de desativar local de coleta,
@@ -425,9 +424,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 17: Buscar Locais de Coleta Avaliados
 
-**US-17:** Eu como usuário, quero buscar locais cadastrados no sistema para encontrar rapidamente o local desejado de forma eficiente.
+
+### **US-17(BUSCAR LOCAIS DE COLETA AVALIADOS):** Eu como usuário, quero buscar locais cadastrados no sistema para encontrar rapidamente o local desejado de forma eficiente.
 
 ### Cenário 1: O Usuário Busca um Registro de Local de Coleta Específico
 - **Dado que** o usuário acessa os registros de locais de coleta observados,
@@ -436,9 +435,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 18: Adicionar a Contagem de Microorganismos
+## Épico 4: RESULTADOS DO MONITORAMENTO
 
-**US-18:** Eu como usuário, quero registrar a contagem de microrganismos de uma dada coleta para que eu possa registrar informações detalhadas e manter um histórico organizado para análise.
+### **US-18(ADICIONAR A CONTAGEM DE MICROORGANISMOS):** Eu como usuário, quero registrar a contagem de microrganismos de uma dada coleta para que eu possa registrar informações detalhadas e manter um histórico organizado para análise.
 
 ### Cenário 1: Registro Bem-Sucedido da Contagem
 - **Dado que** o usuário está na página de adicionar resultados do monitoramento,
@@ -470,9 +469,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 19: Listar a Contagem de Microorganismos
 
-**US-19:** Eu como usuário, quero listar as contagens de microrganismos registradas para que eu possa visualizar e analisar os dados coletados de forma organizada e detalhada.
+
+### **US-19(LISTAR A CONTAGEM DE MICROORGANISMOS):** Eu como usuário, quero listar as contagens de microrganismos registradas para que eu possa visualizar e analisar os dados coletados de forma organizada e detalhada.
 
 ### Cenário 1: Listagem Bem-Sucedida
 - **Dado que** o usuário acessa a página de resultados do monitoramento,
@@ -506,9 +505,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 20: Editar o Registro de Contagem de Microorganismos
 
-**US-20:** Eu como usuário, quero editar o registro de contagem de microrganismos já existente para que eu possa corrigir erros ou atualizar informações relevantes para manter os dados precisos e confiáveis.
+
+### **US-20(EDITAR O REGISTRO DE CONTAGEM):** Eu como usuário, quero editar o registro de contagem de microrganismos já existente para que eu possa corrigir erros ou atualizar informações relevantes para manter os dados precisos e confiáveis.
 
 ### Cenário 1: Edição Bem-Sucedida
 - **Dado que** o usuário acessa o registro de uma contagem existente,
@@ -535,9 +534,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 21: Inserir Ações Corretivas de Resultados Acima do Limite de Contagem Estabelecido
 
-**US-21:** Eu como usuário, quero inserir as ações corretivas para os resultados acima do limite de contagem de microrganismos para o registro de ações de controle mais efetivo e um processo de tomada de decisão mais eficiente.
+
+### **US-21(INSERIR AÇÕES CORRETIVAS):** Eu como usuário, quero inserir as ações corretivas para os resultados acima do limite de contagem de microrganismos para o registro de ações de controle mais efetivo e um processo de tomada de decisão mais eficiente.
 
 ### Cenário 1: Adição de Ação Corretiva com Sucesso
 - **Dado que** o usuário acessa um registro com resultados acima do limite de contagem,
@@ -564,9 +563,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 22: Filtrar um Resultado de Coleta Microbiológica
 
-**US-22:** Eu como usuário, quero aplicar filtros aos resultados de coleta microbiológica para que eu possa localizar informações específicas de forma eficiente e realizar análises mais detalhadas.
+
+### **US-22(FILTRAR UM RESULTADO DE COLETA):** Eu como usuário, quero aplicar filtros aos resultados de coleta microbiológica para que eu possa localizar informações específicas de forma eficiente e realizar análises mais detalhadas.
 
 ### Cenário 1: Filtro Aplicado com Sucesso
 - **Dado que** o usuário acessa a página de resultados do monitoramento,
@@ -598,9 +597,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 23: Visualizar Resultados da Coleta dos Pontos no Dashboard
+## Épico 5: DASHBOARD
 
-**US-23:** Como usuário, quero visualizar no dashboard os resultados de coleta para cada ponto, a fim de acompanhar a situação microbiológica de forma consolidada.
+### **US-23(VISUALIZAR RESULTADOS DOS PONTOS):** Como usuário, quero visualizar no dashboard os resultados de coleta para cada ponto, a fim de acompanhar a situação microbiológica de forma consolidada.
 
 ### Cenário 1: O Usuário Quer Visualizar o Resultado de Coleta dos Pontos Avaliados
 - **Dado que** o usuário acessa o dashboard,
@@ -616,9 +615,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 24: Visualizar Pontos Acima do Limite de Contagem no Dashboard
 
-**US-24:** Como usuário, quero que o dashboard destaque os pontos que excederem o limite de contagem, para priorizar ações corretivas.
+
+### **US-24(VISUALIZAR PONTOS ACIMA DO LIMITE):** Como usuário, quero que o dashboard destaque os pontos que excederem o limite de contagem, para priorizar ações corretivas.
 
 ### Cenário 1: O Usuário Deseja Visualizar Pontos Acima do Limite de Contagem no Dashboard
 - **Dado que** o usuário acessa o dashboard,
@@ -634,9 +633,8 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 25: Visualizar Resultados em Função do Nível de Alerta no Dashboard
 
-**US-25:** Como usuário, quero visualizar os resultados agrupados por nível de alerta (normal, atenção, crítico), para facilitar a análise dos dados críticos.
+### **US-25(VISUALIZAR RESULTADOS POR NÍVEL DE ALERTA):** Como usuário, quero visualizar os resultados agrupados por nível de alerta (normal, atenção, crítico), para facilitar a análise dos dados críticos.
 
 ### Cenário 1: O Usuário Deseja Visualizar Resultados de Acordo com os Níveis de Alerta
 - **Dado que** o usuário acessa o dashboard,
@@ -645,9 +643,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 26: Filtrar Resultados por Microorganismo Observado
 
-**US-26:** Como usuário, quero filtrar no dashboard os resultados por tipo de microorganismo, para avaliar padrões de contagem específicos.
+
+### **US-26(FILTRAR RESULTADOS POR MICROORGANISMO):** Como usuário, quero filtrar no dashboard os resultados por tipo de microorganismo, para avaliar padrões de contagem específicos.
 
 ### Cenário 1: O Usuário Filtra os Resultados por Microorganismo
 - **Dado que** o usuário acessa o dashboard,
@@ -658,9 +656,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 27: Filtrar Resultados por Local de Coleta
 
-**US-27:** Como usuário, quero filtrar no dashboard os resultados por local de coleta, para analisar os dados de uma área específica.
+
+### **US-27(FILTRAR RESULTADOS POR LOCAL):** Como usuário, quero filtrar no dashboard os resultados por local de coleta, para analisar os dados de uma área específica.
 
 ### Cenário 1: O Usuário Filtra os Resultados por Local de Coleta
 - **Dado que** o usuário acessa o dashboard,
@@ -671,9 +669,9 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 
 ---
 
-## Épico 28: Filtrar Resultados por Período de Tempo Estudado
 
-**US-28:** Como usuário, quero filtrar os resultados no dashboard por período de tempo, para entender as variações ao longo de diferentes intervalos.
+
+### **US-28(FILTRAR RESULTADOS POR PERÍODO):** Como usuário, quero filtrar os resultados no dashboard por período de tempo, para entender as variações ao longo de diferentes intervalos.
 
 ### Cenário 1: O Usuário Informa a Data Referencial de Início
 - **Dado que** o usuário acessa o dashboard,
@@ -717,3 +715,4 @@ Abaixo estão os cartões e as confirmações das histórias selecionadas para o
 | :--------: | :--------: | :--------:  | :--------: | 
 |      15/12/2024      |      1.0      |      Criação do documento       |     Breno Fernandes     |
 |      23/12/2024      |      1.1      |      Adicionando especificações de requisitos       |     Breno Fernandes, Guilherme, Rafael, Renan, Breno Lucena e João     |
+|      26/12/2024      |      1.1      |      Adicionando nomes aos RFs nas especificações       |     Breno Fernandes, Guilherme, Rafael, Renan, Breno Lucena e João     |
