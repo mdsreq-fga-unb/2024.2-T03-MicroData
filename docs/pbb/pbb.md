@@ -147,7 +147,7 @@ Então o sistema deve enviar uma mensagem ativa no aplicativo do cliente com o t
 > Critérios de aceitação:
 
 - O sistema deve permitir que atendentes e clientes cadastrem um equipamento.
-- O cadastro deve incluir informações como modelo, fabricante e número de série.
+- O cadastro deve incluir informações de modelo, fabricante e número de série.
 - Todas as informações do formulário devem ser itens obrigatórios para o cadastro.
 - Os equipamentos cadastrados devem ser associados à solicitação de serviço.
 - Não deve haver aparelhos com número de série duplicado no sistema;
@@ -180,6 +180,7 @@ Então o sistema deve notificar o usuário com a informação “Aparelho cadast
 - Uma solicitação de assistência não pode ser agendada em um mesmo equipamento com uma solicitação em aberto;
 - Cada solicitação deve receber um identificador único.
 - As solicitações registradas devem ser visíveis para os atendentes e técnicos.
+- As solicitações registradas devem conter o aparelho a qual o serviço se refere, descrição do serviço solicitado, data e hora de realização do serviço e técnico designado. 
 
 > Cenários (BDD’s):
 
@@ -223,7 +224,7 @@ Então o sistema deve exibir uma mensagem "Erro ao registrar solicitação. Tent
 > Critérios de Aceitação:
 
 - O sistema deve permitir que atendentes e clientes acessem o histórico de agendamentos realizados.
-- O histórico deve exibir detalhes como data, horário, status e técnico responsável.
+- O histórico deve exibir detalhes de data, horário, status e técnico responsável.
 - O usuário deve poder filtrar e ordenar os agendamentos por data e status.
 - Caso não haja agendamentos registrados, o sistema deve exibir uma mensagem informativa.
 
@@ -322,7 +323,7 @@ Então o sistema deve exibir uma mensagem de erro "Todos os campos obrigatórios
 > Critérios de Aceitação:
 
 - O sistema deve enviar alertas automáticos antes do prazo do SLA expirar.
-- O cliente e o atendente devem receber essas notificações.
+- O cliente e o atendente devem receber essas notificações de aproximação do tempo para o encerramento da SLA.
 - A periodicidade das notificações deve ser configurável.
 
 ### US-09 Eu como cliente corporativo, quero visualizar as mudanças de status conforme o avanço das atividades para um contato mais efetivo com o cliente.
@@ -394,7 +395,7 @@ Então o sistema deve exibir uma mensagem de erro "Todos os campos obrigatórios
 
 > Critérios de aceitação:
 
-- O sistema deve permitir que o técnico de campo altere o status de uma solicitação de assistência para um dos status predefinidos (como "Em andamento", "Concluída", "Aguardando peças").
+- O sistema deve permitir que o técnico de campo altere o status de uma solicitação de assistência para um dos status predefinidos ( "Em andamento", "Concluída", "Aguardando peças").
 - O sistema deve validar se a alteração do status é permitida com base no status atual da solicitação. Caso contrário, uma mensagem de erro clara deve ser exibida.
 - Toda modificação de status deve ser registrada com a data, hora e o identificador do técnico de campo responsável pela alteração.
 - Uma notificação (por e-mail ou no sistema) deve ser enviada para o responsável ou a equipe quando o status da solicitação for alterado.
