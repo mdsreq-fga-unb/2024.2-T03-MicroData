@@ -1,0 +1,1465 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../iteracoes/iteracao34/">
+      
+      
+        <link rel="next" href="../../usm/userStoryMap/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>PBB - MicroData</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#definicoes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MicroData" class="md-header__button md-logo" aria-label="MicroData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MicroData
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PBB
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-MicroData" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2024.2-T03-MicroData
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MicroData" class="md-nav__button md-logo" aria-label="MicroData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MicroData
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-MicroData" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2024.2-T03-MicroData
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pagina Inicial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cenario_cliente/cenario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cenário atual do cliente e do Negócio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visão do Produto e Projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Visão do Produto e Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/visao_do_produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solução Proposta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/estrategias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estratégias de Engenharia de Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/engenharia_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engenharia de Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/cronograma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cronograma e Entregas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/interacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interação entre Equipe e Cliente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/requisitos_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos de Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/dor_dod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DoR e DoD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/backlog_produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog do Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/prototipo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protótipo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/especificacao_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação dos Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/licoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lições Aprendidas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Iterações
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Iterações
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iteracoes/iteracao34/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 3 e 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PBB
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    PBB
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#product-backlog-building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Backlog Building
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pbb-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      PBB Canvas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de Aceitação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bdds" class="md-nav__link">
+    <span class="md-ellipsis">
+      BDD's
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usm/userStoryMap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    USM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UC
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/usercase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagramação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entregas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entregas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#product-backlog-building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Backlog Building
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pbb-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      PBB Canvas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de Aceitação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bdds" class="md-nav__link">
+    <span class="md-ellipsis">
+      BDD's
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="definicoes">Definições</h1>
+<h2 id="product-backlog-building">Product Backlog Building</h2>
+<p>É uma sigla para Product Backlog Building (PBB). É uma técnica para criar e manter uma lista de itens de trabalho para um projeto de software. O PBB tem como objetivo principal construir um backlog de forma colaborativa, de modo que todos os envolvidos no projeto compreendam o contexto do negócio.  É um processo contínuo que começa antes do início do projeto e continua durante todo o ciclo de vida do projeto.</p>
+<h2 id="pbb-canvas">PBB Canvas</h2>
+<p>PBB é representado por um canvas chamado de PBB Canvas que tem um fluxo bem simples e de fácil compreensão, principalmente para facilitar o entendimento do cliente, pois sua participação é de suma importância nesse processo de construção.</p>
+<h2 id="criterios-de-aceitacao">Critérios de Aceitação</h2>
+<p>Os critérios de aceitação são um conjunto de condições específicas que um produto, funcionalidade ou requisito deve atender para ser considerado completo e aceito pelo cliente ou pela equipe de qualidade. Eles definem o escopo, os limites e as expectativas de um requisito, garantindo que todas as partes envolvidas tenham um entendimento claro sobre o que deve ser entregue.</p>
+<h2 id="bdds">BDD's</h2>
+<p>Behavior-Driven Development (BDD) é uma metodologia ágil de desenvolvimento de software que enfatiza a colaboração entre desenvolvedores, testadores e stakeholders não técnicos para definir o comportamento esperado de um sistema.</p>
+<p>O BDD estende o Test-Driven Development (TDD), focando na especificação de requisitos por meio de cenários escritos em linguagem natural, geralmente utilizando a estrutura Given-When-Then (Dado-Quando-Então).</p>
+<h1 id="estudo-de-caso">Estudo de caso</h1>
+<p>Para aplicação dos conceitos anteriormente abordados, foi realizado o estudo de caso da empresa fictícia TechFix.</p>
+<h2 id="canvas-pbb">Canvas PBB</h2>
+<p>O acesso ao PBB Canvas do estudo de caso pode ser feito no <a href="https://miro.com/app/board/uXjVLr5J0PU=/?share_link_id=506084747667">link</a>.</p>
+<h3 id="problemas">Problemas</h3>
+<p><img alt="" src="../../assets/pbb/1%20-%20PROBLEMAS%20CLIENTES.png" /></p>
+<p><img alt="" src="../../assets/pbb/2%20-%20PROBLEMAS%20INTERNOS.png" /></p>
+<h3 id="expectativas">Expectativas</h3>
+<p><img alt="" src="../../assets/pbb/3%20-%20EXPECTATIVAS%20CLIENTES.png" /></p>
+<p><img alt="" src="../../assets/pbb/4%20-%20EXPECTATIVAS%20INTERNAS.png" /></p>
+<h3 id="personas">Personas</h3>
+<p>Persona 1:</p>
+<p><img alt="" src="../../assets/pbb/5%20-%20PERSONA%201.png" /></p>
+<p>Persona 2:</p>
+<p><img alt="" src="../../assets/pbb/6%20-%20PRESONA%202.png" /></p>
+<p>Persona 3:</p>
+<p><img alt="" src="../../assets/pbb/7%20-%20PERSONA%203.png" /></p>
+<p>Persona 4:</p>
+<p><img alt="" src="../../assets/pbb/8%20-%20PERSONA%204.png" /></p>
+<p>Persona 5:</p>
+<p><img alt="" src="../../assets/pbb/9%20-%20PERSONA%205.png" /></p>
+<h3 id="features">Features</h3>
+<p>Features Persona 1:</p>
+<p><img alt="" src="../../assets/pbb/10%20-%20FEATURES%20PERSONA%201.png" /></p>
+<p>Features Persona 2:</p>
+<p><img alt="" src="../../assets/pbb/11%20-%20FEATURES%20PERSONA%202.png" /></p>
+<p>Features Persona 3:</p>
+<p><img alt="" src="../../assets/pbb/12%20-%20FEATURES%20PERSONA%203.png" /></p>
+<p>Features Persona 4:</p>
+<p><img alt="" src="../../assets/pbb/13%20-%20FEATURES%20PERSONA%204.png" /></p>
+<p>Features Persona 5:</p>
+<p><img alt="" src="../../assets/pbb/14%20-%20FEATURES%20PERSONA%205.png" /></p>
+<h3 id="pbis">PBI's</h3>
+<p>PBI's Persona 1:
+<img alt="" src="../../assets/pbb/15%20-%20PBI%20PERSONA%201.png" /></p>
+<p>PBI's Persona 2:</p>
+<p><img alt="" src="../../assets/pbb/16%20-%20PBI%20PERSONA%202.png" /></p>
+<p>PBI's Persona 3:</p>
+<p><img alt="" src="../../assets/pbb/17%20-%20PBI%20PERSONA%203.png" /></p>
+<p>PBI's Persona 4:</p>
+<p><img alt="" src="../../assets/pbb/18%20-%20PBI%20PERSONA%204.png" /></p>
+<p>PBI's Persona 5:</p>
+<p><img alt="" src="../../assets/pbb/19%20-%20PBI%20PERSONA%205.png" /></p>
+<h2 id="solicitacoes-da-atividade">Solicitações da atividade</h2>
+<p>Do total de PBI's identificados, 100% das histórias precisavam estar redigidas, 50% das hitórias precisavam de critérios de aceitação definidos e ao menos 5 histórias com BDD's redigidos. Sendo assim, gerou-se a seguinte relação de histórias, Critérios de Aceitação e BDD's:</p>
+<ul>
+<li>Total de PBI's identificados: 34</li>
+<li>Histórias de usuário redigidas: 34</li>
+<li>Total de histórias com critérios de Aceitação: 17</li>
+<li>Total de histórias com BDD's levantados: 5.</li>
+</ul>
+<h2 id="historias-de-usuario-com-criterios-de-aceitacao-e-bdds">Histórias de usuário com Critérios de Aceitação e BDD's</h2>
+<h3 id="us-01-eu-como-atendente-quero-comunicar-ocorridos-entre-as-partes-envolvidas-para-uma-comunicacao-mais-efetiva">US-01: Eu como atendente quero comunicar ocorridos entre as partes envolvidas, para uma comunicação mais efetiva.</h3>
+<blockquote>
+<p>Critérios de Aceitação:</p>
+</blockquote>
+<ul>
+<li>O sistema deve permitir que atendentes e clientes registrem mensagens sobre ocorridos em um chat no aplicativo;</li>
+<li>O chat não deve permitir o envio de imagens ao longo da conversa;</li>
+<li>As mensagens devem ser armazenadas e associadas à solicitação correspondente.</li>
+<li>As partes envolvidas devem ser notificadas quando houver uma nova comunicação por meio de pop-ups do aplicativo no aparelho móvel do cliente;</li>
+<li>As partes envolvidas devem ser notificadas no ícone do chat no aplicativo móvel;</li>
+</ul>
+<blockquote>
+<p>Cenários (BDD’s):</p>
+</blockquote>
+<p><strong>Cenário 1: Cliente acessa o chat de dúvidas do aplicativo</strong></p>
+<p>Dado que o cliente acessa o chat de dúvidas do aplicativo
+Quando entra no chat
+Então o sistema deve apresentar todo o histórico de conversas anteriormente realizadas entre cliente e atendente.</p>
+<p><strong>Cenário 2: Cliente envia uma mensagem para o chat de dúvidas</strong></p>
+<p>Dado que o cliente envia uma mensagem no chat do aplicativo com qualquer conteúdo (“Olá”, “Bom dia”, “Boa tarde”, etc.)
+Quando o sistema identifica o seu recebimento
+Então a resposta dada pelo bot deve ser “Olá, aqui é o chat da Techfix! Em instantes um(a) de nossos atendentes entrará em contato” e redirecionar o atendimento para a fila de um atendente disponível.</p>
+<p><strong>Cenário 3: O atendente entra em contato com o cliente</strong></p>
+<p>Dado que o atendente entra em contato com o cliente pelo chat do aplicativo
+Quando seleciona o cliente em questão
+Então o sistema deve enviar uma mensagem ativa no aplicativo do cliente com o texto “Olá, aqui é o(a) atendente da Techfix! Gostaria de entrar em contato contigo”.</p>
+<h3 id="us-02-eu-como-atendente-quero-cadastrar-o-equipamento-a-ser-reparado-pelo-tecnico-para-garantir-especificacoes-mais-detalhadas">US-02 Eu como atendente quero cadastrar o equipamento a ser reparado pelo técnico, para garantir especificações mais detalhadas.</h3>
+<blockquote>
+<p>Critérios de aceitação:</p>
+</blockquote>
+<ul>
+<li>O sistema deve permitir que atendentes e clientes cadastrem um equipamento.</li>
+<li>O cadastro deve incluir informações de modelo, fabricante e número de série.</li>
+<li>Todas as informações do formulário devem ser itens obrigatórios para o cadastro.</li>
+<li>Os equipamentos cadastrados devem ser associados à solicitação de serviço.</li>
+<li>Não deve haver aparelhos com número de série duplicado no sistema;</li>
+</ul>
+<blockquote>
+<p>Cenários (BDD’s):</p>
+</blockquote>
+<p><strong>Cenário 1: O atendente quer cadastrar um equipamento no sistema</strong></p>
+<p>Dado que o cliente precisa cadastrar um equipamento a ser reparado no sistema
+Quando acessa a página de cadastro
+Então o sistema deve apresentar um formulário de cadastro com as informações de: nome, modelo, fabricante e número de série do aparelho.</p>
+<p><strong>Cenário 2: O atendente tenta fazer o cadastro de aparelho não informa um dos dados do formulário</strong></p>
+<p>Dado que o cliente ou atendente responde o formulaŕio de cadastro
+Quando não deixa informações em qualquer um dos campos
+Então o sistema deve notificar o usuário com a informação “Erro de registro, O campo <NOME DO CAMPO> deve ser preenchido”.</p>
+<p><strong>Cenário 3: O cliente ou atendente tenta fazer o cadastro de um aparelho e cadastra com sucesso.</strong></p>
+<p>Dado que o cliente ou atendente responde o formulaŕio de cadastro 
+Quando preenche todas as informações do formulário
+Então o sistema deve notificar o usuário com a informação “Aparelho cadastrado com sucesso” e realizar o registro dos dados no sistema.</p>
+<h3 id="us-03-eu-como-atendente-quero-registrar-a-solicitacao-de-reparo-para-garantir-que-haja-o-correto-registro-de-uma-ocorrencia">US-03 Eu como atendente quero registrar a solicitação de reparo para garantir que haja o correto registro de uma ocorrência.</h3>
+<blockquote>
+<p>Critérios de Aceitação:</p>
+</blockquote>
+<ul>
+<li>O sistema deve permitir que atendentes e clientes registrem solicitações de reparo.</li>
+<li>Uma solicitação de assistência não pode ser agendada em um mesmo equipamento com uma solicitação em aberto;</li>
+<li>Cada solicitação deve receber um identificador único.</li>
+<li>As solicitações registradas devem ser visíveis para os atendentes e técnicos.</li>
+<li>As solicitações registradas devem conter o aparelho a qual o serviço se refere, descrição do serviço solicitado, data e hora de realização do serviço e técnico designado. </li>
+</ul>
+<blockquote>
+<p>Cenários (BDD’s):</p>
+</blockquote>
+<p><strong>Cenário 1: Preenchimento do formulário de solicitação de reparo</strong></p>
+<p>Dado que o cliente ou atendente querem realizar a solicitação de reparo de um equipamento
+Quando acessam a interface do sistema
+Então o sistema deve apresentar um formulário com os campos de “Aparelho cadastrado”, “Decrição do ocorrido” e “Imagem do ocorrido”.</p>
+<p><strong>Cenário 2: Registro bem-sucedido da solicitação</strong></p>
+<p>Dado que o atendente ou cliente deseja registrar uma solicitação de reparo E insere todas as informações obrigatórias (Aparelho: “Roteador Wi-Fi 6 Dual band W6-1500 Intelbras”, descrição: "Roteador não liga ao ser conectado na tomada") 
+Quando ele confirma o registro 
+Então o sistema deve criar a solicitação com um número único E exibir uma mensagem de confirmação "Solicitação registrada com sucesso!" E notificar o usuário sobre o registro.</p>
+<p><strong>Cenário 3: Atribuição de número único à solicitação</strong></p>
+<p>Dado que um atendente ou cliente registra uma solicitação de reparo 
+Quando a solicitação é salva no sistema 
+Então o sistema deve gerar um identificador único para a solicitação.</p>
+<p><strong>Cenário 4: Tentativa de registro sem preencher o campo de aparelho cadastrado</strong></p>
+<p>Dado que o atendente ou cliente acessa o formulário de solicitação de reparo E não seleciona o aparelho cadastrado
+Quando ele tenta confirmar o registro 
+Então o sistema deve exibir uma mensagem de erro "Deve haver um aparelho cadastrado no sistema para registrar uma solicitação de reparo." E não deve registrar a solicitação.</p>
+<p><strong>Cenário 5: Tentativa de registro sem preencher o campo de descrição do ocorrido</strong>
+Dado que o atendente ou cliente acessa o formulário de solicitação de reparo E não preenche a descrição do problema 
+Quando ele tenta confirmar o registro 
+Então o sistema deve exibir uma mensagem de erro "A descrição do problema é obrigatória." E não deve registrar a solicitação.</p>
+<p><strong>Cenário 6: Falha no registro por erro no sistema</strong></p>
+<p>Dado que o atendente ou cliente preenche corretamente todos os campos obrigatórios E tenta confirmar o registro 
+Quando ocorre uma falha no sistema 
+Então o sistema deve exibir uma mensagem "Erro ao registrar solicitação. Tente novamente mais tarde." E não deve registrar a solicitação.</p>
+<h3 id="us-04-eu-como-atendente-quero-acessar-o-historico-de-solicitacoes-de-registros-de-reparo-para-facilitar-a-obtencao-de-informacao">US-04 Eu como atendente quero acessar o histórico de solicitações de registros de reparo para facilitar a obtenção de informação.</h3>
+<blockquote>
+<p>Critérios de Aceitação:</p>
+</blockquote>
+<ul>
+<li>O sistema deve permitir que atendentes e clientes acessem o histórico de agendamentos realizados.</li>
+<li>O histórico deve exibir detalhes de data, horário, status e técnico responsável.</li>
+<li>O usuário deve poder filtrar e ordenar os agendamentos por data e status.</li>
+<li>Caso não haja agendamentos registrados, o sistema deve exibir uma mensagem informativa.</li>
+</ul>
+<blockquote>
+<p>Cenários (BDD’s):</p>
+</blockquote>
+<p><strong>Cenário 1: O clliente ou atendente acessa o histórico de solicitações de reparo</strong></p>
+<p>Dado que o atendente ou cliente  acessa o histórico de solicitações de reparo E existem solicitações múltiplas solicitações reparo
+Quando ele acessa o histórico de solicitações de reparo
+Então o sistema deve exibir a lista de registros de reparo com data, horário, status e técnico responsável.</p>
+<p><strong>Cenário 2: O cliente ou atendente filtra uma determinada solicitação por período de tempo</strong></p>
+<p>Dado que o atendente ou cliente acessa o histórico de solicitações E existem solicitações múltiplas solicitações
+Quando ele insere uma data de início e uma data de fim
+Então o sistema deve exibir somente as solicitações dentro do período selecionado.</p>
+<p><strong>Cenário 3: O cliente ou atendente filtra um registro de reparo por técnico de campo</strong></p>
+<p>Dado que o atendente ou cliente acessa o histórico de solicitações de reparo E existem solicitações múltiplas solicitações reparo
+Quando ele seleciona o nome de um dado operador
+Então o sistema deve exibir somente registros de atendimento encerrados pelo operador em questão.</p>
+<p><strong>Cenário 4: Sem Agendamentos registrados</strong></p>
+<p>Dado que o atendente ou cliente acessa a interface do sistema E não há nenhum agendamento de reparo registrado 
+Quando ele tenta visualizar o histórico de reparo
+Então o sistema deve exibir a mensagem "Nenhum agendamento de reparo encontrado."</p>
+<p><strong>Cenário 5: Erro ao carregar histórico</strong></p>
+<p>Dado que o atendente ou cliente acessa a interface do sistema E ocorre uma falha no carregamento dos dados 
+Quando ele tenta visualizar o histórico de agendamentos de reparo
+Então o sistema deve exibir uma mensagem de erro "Falha ao carregar histórico. Tente novamente mais tarde."</p>
+<h3 id="us-05-eu-como-atendente-quero-modificar-o-a-solicitacoo-de-reparo-para-maior-consistencia-das-informacoes">US-05 Eu como atendente quero modificar o a solicitaçõo de reparo para maior consistência das informações.</h3>
+<blockquote>
+<p>Critérios de Aceitação:</p>
+</blockquote>
+<ul>
+<li>O sistema deve permitir a alteração de agendamentos previamente registrados.</li>
+<li>O cliente e o técnico devem ser notificados das mudanças.</li>
+<li>Apenas solicitações ainda não iniciadas podem ser remarcadas.</li>
+</ul>
+<blockquote>
+<p>Cenários (BDD’s):</p>
+</blockquote>
+<p><strong>Cenário 1: Edição bem-sucedida da solicitação</strong></p>
+<p>Dado que o atendente ou cliente acessa uma solicitação de reparo existente E deseja modificar a descrição do problema 
+Quando ele insere a nova descrição e confirma a alteração 
+Então o sistema deve atualizar a solicitação com as novas informações E registrar a modificação no histórico de alterações.</p>
+<p><strong>Cenário 2: Notificação de alteração</strong></p>
+<p>Dado que um atendente ou cliente modifica uma solicitação de reparo 
+Quando a alteração é confirmada 
+Então o sistema deve notificar as partes envolvidas sobre a modificação.</p>
+<p><strong>Cenário 3: Alteração da data do reparo</strong></p>
+<p>Dado que o atendente ou cliente deseja alterar a data de um reparo agendado E a solicitação ainda não foi inciada pelo operador
+Quando ele alterar a data para a realização do reparo
+Então o sistema deve atualizar a solicitação com a nova data E registrar a mudança no histórico de alterações.</p>
+<p><strong>Cenário 4: Tentativa de alteração de uma solicitação em atendimento</strong></p>
+<p>Dado que o atendente ou cliente acessa uma solicitação de reparo em andamento
+Quando ele tenta modificar a data de agendamento
+Então o sistema deve exibir uma mensagem de erro "Não é possível modificar esta solicitação" E não deve registrar nenhuma alteração.</p>
+<p><strong>Cenário 5: Tentativa de alteração sem preencher os campos obrigatórios</strong></p>
+<p>Dado que o atendente ou cliente acessa a solicitação de reparo E tenta modificar os detalhes 
+Quando ele deixa campos obrigatórios em branco 
+Então o sistema deve exibir uma mensagem de erro "Todos os campos obrigatórios devem ser preenchidos." E não deve salvar a modificação.</p>
+<h2 id="historias-de-usuario-com-criterios-de-aceitacao">Histórias de Usuário com Critérios de Aceitação</h2>
+<h3 id="us-06-eu-como-atendente-quero-acompanhar-o-periodo-de-tempo-que-ainda-falta-para-a-conclusao-de-um-atendimento-para-garantir-que-o-servico-seja-realizado-no-periodo-de-tempo-adequado">US-06 Eu como atendente quero acompanhar o período de tempo que ainda falta para a conclusão de um atendimento para garantir que o serviço seja realizado no período de tempo adequado.</h3>
+<blockquote>
+<p>Critérios de aceitação:</p>
+</blockquote>
+<ul>
+<li>O sistema deve exibir um contador regressivo até a conclusão do atendimento.</li>
+<li>O cliente e o atendente devem poder visualizar essa informação em tempo real.</li>
+<li>O tempo estimado deve ser baseado no SLA definido.</li>
+</ul>
+<h3 id="us-07-eu-como-atendente-quero-acompanhar-o-periodo-de-tempo-do-sla-extrapolado-para-priorizar-a-realizacao-de-um-servico-atrasado">US-07 Eu como atendente quero acompanhar o período de tempo do SLA extrapolado para priorizar a realização de um serviço atrasado.</h3>
+<blockquote>
+<p>Critérios de aceitação:</p>
+</blockquote>
+<ul>
+<li>O sistema deve destacar solicitações com SLA ultrapassado.</li>
+<li>Deve ser possível filtrar e priorizar esses atendimentos.</li>
+<li>Notificações devem ser enviadas para os atendentes responsáveis.</li>
+</ul>
+<h3 id="us-08-eu-como-atendente-ou-cliente-quero-ser-notificado-periodicamente-sobre-a-aproximacao-de-tempo-ate-o-encerramento-do-prazo-de-sla-para-garantir-que-o-servico-seja-realizado-no-periodo-de-tempo-adequado">US-08 Eu como atendente ou cliente, quero ser notificado periodicamente sobre a aproximação de tempo até o encerramento do prazo de SLA para garantir que o serviço seja realizado no período de tempo adequado.</h3>
+<blockquote>
+<p>Critérios de Aceitação:</p>
+</blockquote>
+<ul>
+<li>O sistema deve enviar alertas automáticos antes do prazo do SLA expirar.</li>
+<li>O cliente e o atendente devem receber essas notificações de aproximação do tempo para o encerramento da SLA.</li>
+<li>A periodicidade das notificações deve ser configurável.</li>
+</ul>
+<h3 id="us-09-eu-como-cliente-corporativo-quero-visualizar-as-mudancas-de-status-conforme-o-avanco-das-atividades-para-um-contato-mais-efetivo-com-o-cliente">US-09 Eu como cliente corporativo, quero visualizar as mudanças de status conforme o avanço das atividades para um contato mais efetivo com o cliente.</h3>
+<blockquote>
+<p>Critérios de aceitação:</p>
+</blockquote>
+<ul>
+<li>O cliente corporativo deve poder acompanhar as alterações de status de uma solicitação.</li>
+<li>O histórico de status deve ser registrado e acessível.</li>
+<li>O sistema deve permitir filtros por status.</li>
+</ul>
+<h3 id="us-10-eu-como-cliente-corporativo-quero-ser-notificado-a-cada-atualizacao-de-atividades-para-um-contato-mais-efetivo-com-o-cliente">US-10 Eu como cliente corporativo quero ser notificado a cada atualização de atividades para um contato mais efetivo com o cliente.</h3>
+<blockquote>
+<p>Critérios de aceitação:</p>
+</blockquote>
+<ul>
+<li>O cliente corporativo deve ser notificado sempre que houver uma atualização na solicitação.</li>
+<li>As notificações devem conter detalhes sobre a atualização realizada.</li>
+<li>As notificações devem ser enviadas via e-mail e sistema.</li>
+</ul>
+<h3 id="us-11-eu-como-cliente-corporativo-quero-receber-o-formulario-de-pesquisa-de-satisfacao-do-atendimento-para-deixar-um-feedback-sobre-o-servico-prestado">US-11 Eu como cliente corporativo, quero receber o formulário de pesquisa de satisfação do atendimento para deixar um feedback sobre o serviço prestado.</h3>
+<blockquote>
+<p>Critérios de Aceitação:</p>
+</blockquote>
+<ul>
+<li>O sistema deve permitir o envio de um formulário de pesquisa ao cliente corporativo após a conclusão do atendimento.</li>
+<li>O formulário deve ser responsivo e de fácil preenchimento.</li>
+<li>As respostas devem ser armazenadas para análise.</li>
+</ul>
+<h3 id="us-12-eu-como-cliente-corporativo-quero-ser-notificado-sobre-o-envio-da-pesquisa-de-satisfacao-para-deixar-um-feedback-sobre-o-servico-prestado">US-12 Eu como cliente corporativo, quero ser notificado sobre o envio da pesquisa de satisfação para deixar um feedback sobre o serviço prestado.</h3>
+<blockquote>
+<p>Critérios de aceitação:</p>
+</blockquote>
+<ul>
+<li>O cliente corporativo deve receber uma notificação informando sobre a pesquisa de satisfação.</li>
+<li>A notificação deve incluir um link direto para a pesquisa.</li>
+<li>A confirmação de recebimento da pesquisa deve ser registrada.</li>
+</ul>
+<h3 id="us-13-eu-como-atendente-quero-acessar-a-lista-de-solicitacoes-agendadas-para-garantir-a-consistencia-de-informacoes">US-13 Eu como atendente, quero acessar a lista de solicitações agendadas para garantir a consistência de informações.</h3>
+<blockquote>
+<p>Critérios de Aceitação:</p>
+</blockquote>
+<ul>
+<li>O atendente deve poder visualizar todas as solicitações agendadas por todos os clientes.</li>
+<li>Deve ser possível aplicar filtros por data, técnico, status e cliente.</li>
+<li>A lista deve ser atualizada em tempo real.</li>
+</ul>
+<h3 id="us-14-eu-como-atendente-quero-reclassificar-a-solicitacao-do-cliente-para-garantir-a-consistencia-de-informacoes">US-14 Eu como atendente, quero reclassificar a solicitação do cliente para garantir a consistência de informações.</h3>
+<blockquote>
+<p>Critérios de Aceitação:</p>
+</blockquote>
+<ul>
+<li>O atendente deve poder modificar a classificação de uma solicitação.</li>
+<li>O sistema deve registrar um histórico de reclassificações.</li>
+<li>O responsável pela modificação deve constar no histórico de atualização.</li>
+</ul>
+<h3 id="us-15-eu-como-atendente-quero-redirecionar-a-solicitacao-a-outro-tecnico-para-garantir-a-prestacao-do-servico-agendado">US-15 Eu como atendente, quero redirecionar a solicitação a outro técnico para garantir a prestação do serviço agendado.</h3>
+<blockquote>
+<p>Critérios de aceitação:</p>
+</blockquote>
+<ul>
+<li>O atendente deve poder atribuir uma solicitação a outro técnico.</li>
+<li>O técnico original e o novo técnico devem ser notificados.</li>
+<li>O histórico de redirecionamento deve ser armazenado.</li>
+<li>O cliente deve ser notificado sobre a mudança do técnico responsável para a realização do atendimento.</li>
+</ul>
+<h3 id="us-16-eu-como-tecnico-de-campo-quero-visualizar-as-solicitacoes-de-assistencia-do-cliente-para-maior-eficiencia-no-atendimento">US-16 Eu como técnico de campo, quero visualizar as solicitações de assistência do cliente, para maior eficiência no atendimento.</h3>
+<blockquote>
+<p>Critérios de aceitação:</p>
+</blockquote>
+<ul>
+<li>O técnico deve poder visualizar todas as solicitações atribuídas a ele.</li>
+<li>A lista deve ser filtrável por status e urgência.</li>
+<li>As solicitações devem ser apresentadas em ordem de prioridade e por data de execução.</li>
+</ul>
+<h3 id="us-17-eu-como-tecnico-de-campo-quero-modificar-o-status-da-solicitacao-de-assistencia-para-maior-eficiencia-no-atendimento">US-17 Eu como técnico de campo, quero modificar o status da solicitação de assistência, para maior eficiência no atendimento.</h3>
+<blockquote>
+<p>Critérios de aceitação:</p>
+</blockquote>
+<ul>
+<li>O sistema deve permitir que o técnico de campo altere o status de uma solicitação de assistência para um dos status predefinidos ( "Em andamento", "Concluída", "Aguardando peças").</li>
+<li>O sistema deve validar se a alteração do status é permitida com base no status atual da solicitação. Caso contrário, uma mensagem de erro clara deve ser exibida.</li>
+<li>Toda modificação de status deve ser registrada com a data, hora e o identificador do técnico de campo responsável pela alteração.</li>
+<li>Uma notificação (por e-mail ou no sistema) deve ser enviada para o responsável ou a equipe quando o status da solicitação for alterado.</li>
+</ul>
+<h2 id="demais-historias-de-usuario">Demais histórias de usuário</h2>
+<ul>
+<li>US-18 Eu como técnico de campo, quero visualizar o histórico de reparos do equipamento, para maior eficiência no atendimento.</li>
+<li>US-19 Eu como técnico de campo, quero detalhar as atividades de reparo realizadas em um equipamento para uma gestão de informações mais detalhada.</li>
+<li>US-20 Eu como técnico de campo, quero agendar as atividades de reparo de um equipamento, para uma gestão de informações mais detalhada.</li>
+<li>US-21 Eu como técnico de campo, quero inserir imagens do equipamento do cliente para uma gestão de informações mais detalhada.</li>
+<li>US-22 Eu como técnico de campo, quero encerrar o atendimento registrado pelo cliente para melhor gestão de informações.</li>
+<li>US-23 Eu como técnico de campo quero classificar a procedência do atendimento prestado ao cliente para melhor gestão de informações.</li>
+<li>US-24 Eu como técnico de campo quero registrar a causa raiz do problema que gerou a solicitação melhor gestão de informações.</li>
+<li>US-25 Eu como técnico de campo, quero registrar o material utilizado na realização ddo atendimento para identificação de possíveis áreas de melhoria.</li>
+<li>US-26 Eu como técnico de campo, quero gerar um relatório com as informações dor atendimento para melhor gestão de informações.</li>
+<li>US-27 Eu como diretora de operações, quero visualizar o status das atividades realizadas pelos membros da equipe de campo para maior acompanhamento das atividades em tempo real. </li>
+<li>US-28 Eu como diretora de operações, quero visualizar a contagem de SLA dos atendimentos para maior acompanhamento das atividades em tempo real. </li>
+<li>US-29 Eu como diretora de operações, quero gerar um relatório dos dados de SLA dos atendimentos, para facilitar a verificação de problemas pontuais.</li>
+<li>US-30 Eu como diretora de operações, quero gerar um relatório dos detalhamentos dos atendimentos para facilitar a verificação de problemas pontuais.</li>
+<li>US-31 Eu como diretora de operações, quero gerar um relatório de procedência datendimentos encerrados pelos técnicos de campo, para facilitar a verificação de problemas pontuais.</li>
+<li>US-32 Eu como diretora de operações, quero gerar um relatório de consumo de material utilizado nos atendimentos para facilitar a identificação de problemas e possíveis melhorias.</li>
+<li>US-33 Eu como diretora de operações, quero visualizar as respostas das pesquisas de satisfação de atendimento, para identificação de problemas e possíveis melhorias.</li>
+<li>US-34 Eu como diretora de operações quero gerar um relatório dos resultados das pesquisas de satisfação, para identificação de problemas e possíveis melhorias.</li>
+<li>US-35: Eu como cliente corporativo quero comunicar ocorridos entre as partes envolvidas, para uma comunicação mais efetiva</li>
+<li>US-36: Eu como cliente corporativo quero cadastrar o equipamento a ser reparado pelo técnico, para garantir especificações mais detalhadas.</li>
+<li>US-37: Eu como cliente corporativo quero registrar a solicitação de reparo para garantir que haja o correto registro de uma ocorrência.</li>
+<li>US-38: Eu como cliente corporativo quero acessar o histórico de solicitações de registros de reparo para facilitar a obtenção de informação.</li>
+<li>US-39: Eu como cliente corporativo quero acessar o histórico de solicitações de registros de reparo para facilitar a obtenção de informação.</li>
+<li>US-40: US-06 Eu como cliente corporativo quero acompanhar o período de tempo que ainda falta para a conclusão de um atendimento para garantir que o serviço seja realizado no período de tempo adequado.</li>
+<li>US-41: Eu como cliente corporativo quero acompanhar o período de tempo do SLA extrapolado para priorizar a realização de um serviço atrasado.</li>
+<li>US-42: Eu como cliente corporativo quero ser notificado periodicamente sobre a aproximação de tempo até o encerramento do prazo de SLA para garantir que o serviço seja realizado no período de tempo adequado.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<p>AGUIAR, Fábio. Product Backlog Building. Fábio Aguiar, 14 jun. 2021. Disponível em: https://fabiogr.com/2021/06/14/pbb/. Acesso em: 20 jan. 2025.</p>
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Data</strong></th>
+<th style="text-align: center;"><strong>Versão</strong></th>
+<th style="text-align: center;"><strong>Descrição</strong></th>
+<th style="text-align: center;"><strong>Autor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">20/11/2024</td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">Criação do documento</td>
+<td style="text-align: center;">Breno Fernandes, Breno Lucena, Storch, João, Rafael e Renan</td>
+</tr>
+<tr>
+<td style="text-align: center;">08/02/2025</td>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">Correções Unidade 3</td>
+<td style="text-align: center;">Storch</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

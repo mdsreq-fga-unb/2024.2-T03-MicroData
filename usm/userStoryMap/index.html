@@ -1,0 +1,1530 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../pbb/pbb/">
+      
+      
+        <link rel="next" href="../../uc/usercase/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>USM - MicroData</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#definicoes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MicroData" class="md-header__button md-logo" aria-label="MicroData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MicroData
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              USM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-MicroData" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2024.2-T03-MicroData
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MicroData" class="md-nav__button md-logo" aria-label="MicroData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MicroData
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-MicroData" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2024.2-T03-MicroData
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pagina Inicial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cenario_cliente/cenario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cenário atual do cliente e do Negócio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visão do Produto e Projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Visão do Produto e Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/visao_do_produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solução Proposta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/estrategias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estratégias de Engenharia de Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/engenharia_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engenharia de Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/cronograma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cronograma e Entregas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/interacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interação entre Equipe e Cliente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/requisitos_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos de Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/dor_dod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DoR e DoD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/backlog_produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog do Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/prototipo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protótipo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/especificacao_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação dos Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visao_produto_projeto/licoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lições Aprendidas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Iterações
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Iterações
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iteracoes/iteracao34/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 3 e 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pbb/pbb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PBB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    USM
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    USM
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user-story-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Story Mapping
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UC
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/usercase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagramação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entregas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entregas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user-story-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Story Mapping
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="definicoes">Definições</h1>
+<h2 id="user-story-mapping">User Story Mapping</h2>
+<p>É uma técnica de planejamento e visualização de requisitos utilizada no desenvolvimento ágil para organizar e priorizar funcionalidades do produto com base na jornada do usuário. A técnica foi criada por Jeff Patton e consiste em mapear as atividades do usuário em um fluxo narrativo (de ponta a ponta), organizando-as em diferentes níveis de detalhe. Isso permite que a equipe compreenda melhor o contexto das funcionalidades e priorize o desenvolvimento das mais importantes primeiro.</p>
+<h1 id="estudo-de-caso">Estudo de caso</h1>
+<p>Para aplicação dos conceitos anteriormente abordados, foi realizado o estudo de caso da empresa fictícia EduConnect.</p>
+<h2 id="usm-canvas">USM - Canvas</h2>
+<p>O acesso ao USM Canvas do estudo de caso pode ser feito no <a href="https://miro.com/app/board/uXjVLwUoLlY=/?share_link_id=695284761771">link</a>.</p>
+<h2 id="personas-objetivos-atividades-e-user-stories">Personas, Objetivos, Atividades e User Stories</h2>
+<p>Persona 1:</p>
+<p><img alt="" src="../../assets/usm/1%20-%20PERSONA%201.png" /></p>
+<p>Persona 2:</p>
+<p><img alt="" src="../../assets/usm/2%20-%20PERSONA%202.png" /></p>
+<p>Persona 3:</p>
+<p><img alt="" src="../../assets/usm/3%20-%20PERSONA%203.png" /></p>
+<p>Persona 4:</p>
+<p><img alt="" src="../../assets/usm/4%20-%20PERSONA%204.png" /></p>
+<p>Persona 5:</p>
+<p><img alt="" src="../../assets/usm/5%20-%20PERSONA%205.png" /></p>
+<p>Persona 6:</p>
+<p><img alt="" src="../../assets/usm/6%20-%20PERSONA%206.png" /></p>
+<h2 id="especificacao-da-atividade">Especificação da atividade</h2>
+<p>Fazer o USM de todas as atividades e histórias identificadas na descrição do estudo de caso. A partir disso, ao menos 15 histórias, devem conter critérios de aceitação. Sendo assim, gerou-se a seguinte relação de histórias, Critérios de Aceitação:</p>
+<ul>
+<li>Quantidade de histórias levantadas a partir do estudo de caso: 74;</li>
+<li>Quantidade de histórias redigidas com cenários: 15.</li>
+</ul>
+<h3 id="tabela-com-a-atividades-historias-de-usuario-e-criterios-de-aceitacao">Tabela com a Atividades, Histórias de usuário e critérios de Aceitação</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>US-INDEX</strong></th>
+<th style="text-align: center;"><strong>ATIVIDADE</strong></th>
+<th style="text-align: center;"><strong>HISTÓRIA</strong></th>
+<th style="text-align: center;"><strong>CRITÉRIOS DE ACEITAÇÃO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">US-01</td>
+<td style="text-align: center;">Criar e organizar o planejamento do projeto.</td>
+<td style="text-align: center;">Eu como Professor Coordenador quero criar e organizar o planejamento do projeto para gerenciar informações de forma centralizada e detalhada.</td>
+<td style="text-align: center;">- O professor coordenador deve poder criar um planejamento para um projeto.<br>- O sistema deve permitir adicionar título, descrição e objetivos do planejamento.<br>- Deve ser possível detalhar objetivos específicos a serem atingidos com o projeto.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-02</td>
+<td style="text-align: center;">Estabelece as disciplinas que compõem o projeto interdisciplinar</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero definir quais disciplinas participarão do projeto interdisciplinar,<br>para que todas as áreas relevantes sejam integradas.</td>
+<td style="text-align: center;">- O professor coordenador deve poder selecionar as disciplinas que farão parte do projeto interdisciplinar.<br>- Deve ser possível adicionar uma nova disciplina caso ela ainda não esteja cadastrada no sistema.<br>- O professor coordenador pode editar a lista de disciplinas participantes a qualquer momento.<br>- Deve ser possível remover uma disciplina do projeto, desde que não haja atividades vinculadas a ela.<br>- O professor coordenador pode atribuir ou alterar os responsáveis por cada disciplina.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-03</td>
+<td style="text-align: center;">Adicionar de etapas e seus prazos no planejamento</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero adicionar etapas com seus respectivos prazos,<br>para que o cronograma do projeto seja bem definido e organizado.</td>
+<td style="text-align: center;">- O professor coordenador deve poder adicionar novas etapas ao cronograma do projeto.<br>- Cada etapa deve ter um título e uma descrição detalhada de suas atividades.&lt;b- Cada etapa deve ter um prazo de início e término configurável.<br>- O sistema deve validar se a data de término não é anterior à data de início.<br>- O professor coordenador pode editar as informações das etapas a qualquer momento.<br>- Deve ser possível remover uma etapa, desde que não haja dependências bloqueando sua exclusão.<br>- As etapas devem ser organizadas em ordem cronológica dentro do cronograma.<br>O professor coordenador deve poder reordenar as etapas conforme necessário.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-04</td>
+<td style="text-align: center;">Estabelece objetivos e expectativas de cada fase.</td>
+<td style="text-align: center;">Como um Professor Coordenador, eu quero definir objetivos e expectativas para cada fase do projeto, para que todas as partes envolvidas compreendam claramente o que precisa ser alcançado.</td>
+<td style="text-align: center;">- O professor coordenador deve poder adicionar objetivos para cada fase do projeto.<br>Cada objetivo deve ter um título e uma descrição detalhada.<br>- O professor coordenador deve poder editar os objetivos e expectativas a qualquer momento.<br>- O sistema deve manter um histórico de alterações para rastrear modificações feitas nos objetivos e expectativas.<br>- Os objetivos devem estar vinculados às respectivas fases do projeto.<br>- Deve ser possível visualizar os objetivos e expectativas de cada fase dentro do cronograma geral do projeto.<br>- O sistema deve permitir marcar objetivos como ""pendente"", ""em andamento"" ou ""concluído"".<br>- Deve ser possível adicionar observações ou atualizações sobre o progresso de cada objetivo.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-05</td>
+<td style="text-align: center;">Realizar o replanejamento de fases e objetivos em tempo real.</td>
+<td style="text-align: center;">Como um Professor Coordenador eu quero ajustar o planejamento de fases e objetivos em tempo real para que o projeto possa responder rapidamente a imprevistos ou mudanças necessárias.</td>
+<td style="text-align: center;">- O professor coordenador deve poder atribuir um ou mais responsáveis para cada etapa do projeto.<br>- O professor coordenador pode modificar os responsáveis de uma etapa a qualquer momento.<br>- O sistema deve notificar os responsáveis sempre que forem designados ou removidos de uma etapa.<br>- Todos os participantes do projeto devem poder visualizar os responsáveis de cada etapa.<br>- O sistema deve registrar e exibir um histórico das alterações nos responsáveis de cada etapa.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-06</td>
+<td style="text-align: center;">Registrar histórico de ajustes feitos no planejamento.</td>
+<td style="text-align: center;">Como um Professor Coordenador, eu quero registrar o histórico de ajustes feitos no planejamento, para que as alterações realizadas sejam documentadas e possam ser consultadas futuramente.</td>
+<td style="text-align: center;">- O sistema deve registrar automaticamente todas as alterações feitas no planejamento.<br>- Cada registro deve conter a data, hora, autor da alteração e uma descrição da mudança.<br>- O professor coordenador deve poder visualizar o histórico completo de ajustes realizados.<br>- Deve ser possível restaurar versões anteriores do planejamento, se necessário.<br>- O histórico de ajustes deve ser acessível apenas para usuários com permissão adequada.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-07</td>
+<td style="text-align: center;">Alocar professores responsáveis por cada uma das fases do projeto</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero atribuir professores responsáveis por cada fase do projeto,<br>para que as responsabilidades estejam claramente definidas e distribuídas.</td>
+<td style="text-align: center;">- O professor coordenador deve poder atribuir um ou mais professores responsáveis para cada fase do projeto.<br>- O sistema deve permitir a alteração dos responsáveis a qualquer momento.<br>- Os professores designados devem receber notificações automáticas ao serem atribuídos ou removidos.<br>- Todos os participantes do projeto devem poder visualizar os responsáveis por cada fase.<br>- O professor coordenador deve poder filtrar as fases do projeto por responsável.<br>- O sistema deve manter um histórico das atribuições e alterações realizadas.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-08</td>
+<td style="text-align: center;">Visualizar a dedução de recursos materiais solicitados para cada atividade / etapa.</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero acompanhar os recursos materiais solicitados para cada etapa,<br>para que possa controlar o orçamento e gerenciar melhor os recursos disponíveis.</td>
+<td style="text-align: center;">- O professor coordenador deve poder visualizar todos os recursos materiais solicitados para cada etapa do projeto.<br>- Cada solicitação de recurso deve incluir descrição, quantidade, custo estimado e status de aprovação.<br>- O sistema deve permitir a edição ou remoção de solicitações antes da aprovação final.<br>- Deve haver um controle do orçamento total, mostrando os custos previstos e os já aprovados.<br>- O professor coordenador deve receber notificações sobre novas solicitações ou alterações nos recursos.<br>- O sistema deve gerar relatórios detalhados sobre os recursos solicitados, aprovados e utilizados.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-09</td>
+<td style="text-align: center;">Aprovar a aquisição de materiais para uma determinada atividade.</td>
+<td style="text-align: center;">Como um Professor Coordenador quero aprovar a aquisição de materiais necessários para uma atividade, para que o processo de compra esteja alinhado ao planejamento e orçamento.</td>
+<td style="text-align: center;">- O professor coordenador deve poder visualizar todas as solicitações de aquisição de materiais para cada atividade.<br>- O sistema deve permitir ao professor coordenador aprovar ou rejeitar as solicitações de materiais.<br>- Cada solicitação aprovada deve ser registrada com a data e o responsável pela aprovação.<br>- O professor coordenador deve ser notificado quando novas solicitações de aquisição forem feitas ou alteradas.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-10</td>
+<td style="text-align: center;">Visualizar o andamento das atividades de uma disciplina.</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero monitorar o progresso das atividades de uma disciplina,<br>para que possa garantir que estão alinhadas ao cronograma e objetivos do projeto.</td>
+<td style="text-align: center;">- O professor coordenador deve poder visualizar o progresso de cada atividade de uma disciplina.<br>- O sistema deve exibir o status de cada atividade (pendente, em andamento, concluída).<br>- O professor coordenador deve poder adicionar ou atualizar o progresso das atividades, incluindo comentários ou observações.<br>- O professor coordenador deve poder gerar relatórios sobre o progresso das atividades de cada disciplina.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-11</td>
+<td style="text-align: center;">Visualizar a atualização do status do cronograma de uma dada etapa.</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero acompanhar o status atualizado do cronograma de cada etapa,<br>para que possa ter uma visão clara do progresso do projeto.</td>
+<td style="text-align: center;">- O professor coordenador deve poder visualizar o status atualizado de cada etapa do cronograma (pendente, em andamento, concluída).<br>- O sistema deve mostrar se a etapa está dentro do prazo, atrasada ou concluída.<br>- O professor coordenador deve ser notificado sempre que o status de uma etapa for atualizado.<br>- O sistema deve exibir uma visão geral do progresso do projeto, incluindo etapas concluídas e em andamento.<br>- O professor coordenador deve poder filtrar o cronograma por data, status ou responsável pela etapa.<br>- O sistema deve gerar relatórios detalhados com o status de cada etapa do cronograma, incluindo prazos e progresso.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-12</td>
+<td style="text-align: center;">Filtrar tarefas por equipe, área ou status.</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero filtrar as tarefas por equipe, área ou status,<br>para que possa localizar e monitorar atividades específicas com facilidade.</td>
+<td style="text-align: center;">- O professor coordenador deve poder visualizar o status atualizado de cada etapa do cronograma (pendente, em andamento, concluída).<br>- O sistema deve mostrar se a etapa está dentro do prazo, atrasada ou concluída.<br>- O professor coordenador deve ser notificado sempre que o status de uma etapa for atualizado.<br>- O professor coordenador deve poder filtrar o cronograma por data, status ou responsável pela etapa.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-13</td>
+<td style="text-align: center;">Ser notificado sobre as atualizações das etapas do projeto.</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero receber notificações sobre atualizações nas etapas do projeto,<br>para que esteja sempre informado sobre o andamento do trabalho.</td>
+<td style="text-align: center;">- O professor coordenador deve receber notificações sempre que houver atualizações nas etapas do projeto.<br>As notificações devem incluir detalhes sobre o tipo de atualização (status, prazos, responsáveis, etc.).<br>- O sistema deve permitir que o professor coordenador personalize as notificações (por exemplo, escolher quais atualizações deseja receber).<br>- As notificações devem ser enviadas em tempo real, sempre que uma mudança for feita.<br>- O professor coordenador deve poder visualizar um histórico das notificações recebidas.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-14</td>
+<td style="text-align: center;">Visualizar os avanços das etapas em gráficos de progresso.</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero visualizar gráficos de progresso das etapas do projeto,<br>para que tenha uma visão clara e visual do desenvolvimento.</td>
+<td style="text-align: center;">- O professor coordenador deve poder visualizar gráficos de progresso para cada etapa do projeto.<br>- O sistema deve permitir a visualização do progresso geral do projeto, incluindo o percentual de conclusão de cada etapa.<br>- O professor coordenador deve poder personalizar os gráficos para exibir dados específicos, como prazos ou responsáveis.<br>- O sistema deve permitir a atualização automática dos gráficos conforme as etapas são concluídas ou modificadas.<br>- O professor coordenador deve poder exportar os gráficos de progresso em formatos como PDF ou imagem.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-15</td>
+<td style="text-align: center;">Visualizar os avanços das atividades deduzidas em gráficos de progresso.</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero acompanhar os avanços das atividades em gráficos,<br>para que possa comparar facilmente o desempenho esperado com o real.</td>
+<td style="text-align: center;">O professor coordenador deve poder visualizar gráficos de desempenho para cada atividade, comparando o progresso real com o esperado.<br>- Os gráficos devem exibir dados como o progresso percentual das atividades em tempo real.<br>- O sistema deve permitir a personalização dos gráficos para incluir diferentes métricas, como prazo ou recursos utilizados.<br>- O professor coordenador deve poder visualizar as diferenças entre o desempenho esperado e o real de forma destacada no gráfico.<br>- O sistema deve atualizar os gráficos automaticamente sempre que o status ou o progresso das atividades for alterado.<br>- O professor coordenador deve poder exportar os gráficos para análise externa, em formatos como PDF ou imagem.</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-16</td>
+<td style="text-align: center;">Comparar metas planejadas e metas atingidas.</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero comparar as metas planejadas com as atingidas,<br>para que possa avaliar a eficácia do projeto e identificar pontos de melhoria.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-17</td>
+<td style="text-align: center;">Enviar notificações de feedback para equipes e membros.</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero enviar feedback para equipes e membros do projeto,<br>para que todos estejam cientes do desempenho e possam se ajustar, se necessário.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-18</td>
+<td style="text-align: center;">Criar espaço para anotações ou relatórios de reuniões.</td>
+<td style="text-align: center;">Como um Professor Coordenador,<br>eu quero registrar anotações ou relatórios de reuniões,<br>para que informações importantes estejam centralizadas e acessíveis.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-19</td>
+<td style="text-align: center;">Organizar materiais de estudo e recursos necessários por tema ou unidade de ensino.</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero organizar materiais de estudo e recursos necessários por tema ou unidade de ensino,<br>para que o acesso ao conteúdo pedagógico seja mais eficiente e organizado para alunos e docentes.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-20</td>
+<td style="text-align: center;">Editar textos e criação de conteúdos multimídia.</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero editar textos e criar conteúdos multimídia,<br>para que o material de ensino seja mais dinâmico, atrativo e adequado às necessidades dos alunos.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-21</td>
+<td style="text-align: center;">Organizar materiais de estudo por tema ou unidade de ensino</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero categorizar os materiais de estudo por tema ou unidade de ensino,<br>para que os alunos possam encontrar o conteúdo relacionado de forma intuitiva.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-22</td>
+<td style="text-align: center;">Estabelecer avaliações individuais e seus respectivos critérios.</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero criar avaliações e definir seus critérios de avaliação,<br>para que os alunos saibam como seu desempenho será medido.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-23</td>
+<td style="text-align: center;">Estabelecer avaliações em grupo e seus respecitivos critérios.</td>
+<td style="text-align: center;">Como professor participante, eu quero criar avaliações em grupo e definir critérios claros de avaliação, para que eu possa promover a colaboração entre os alunos e avaliar seu desempenho de forma objetiva</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-24</td>
+<td style="text-align: center;">Alocar alunos para execução de atividades em grupo.</td>
+<td style="text-align: center;">Como professor participante, eu quero alocar alunos para a execução de atividades em grupo, para que eu possa organizar as equipes de maneira eficiente e promover o trabalho colaborativo entre os alunos.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-25</td>
+<td style="text-align: center;">Deduzir o material necessário para realização de uma atividade</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero calcular os materiais necessários para realizar uma atividade,<br>para que os recursos sejam planejados com antecedência e evitem atrasos.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-26</td>
+<td style="text-align: center;">Submeter à aprovação do corrdenador caso haja a necessidade de compra ou aquisição de material extra.</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero submeter solicitações de compra ou aquisição de material extra para aprovação do coordenador,<br>para que seja possível obter os recursos necessários de forma controlada e transparente.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-27</td>
+<td style="text-align: center;">Gerar relatórios de progresso baseados nas atividades realizadas.</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero gerar relatórios sobre o progresso das atividades realizadas,<br>para que possa acompanhar e compartilhar o desempenho dos alunos e equipes</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-28</td>
+<td style="text-align: center;">Gerar gráficos e relatórios de progresso baseados em avaliações e atividades realizadas.</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero visualizar gráficos e relatórios baseados em avaliações e atividades realizadas,<br>para que o progresso dos alunos seja monitorado e analisado de forma visual e prática.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-29</td>
+<td style="text-align: center;">Monitorar as entregas dos projetos</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero acompanhar as entregas dos projetos,<br>para que possa verificar se as atividades estão sendo concluídas no prazo e com a qualidade esperada.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-30</td>
+<td style="text-align: center;">Visualizar indicadores de engajamento dos alunos.</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero acessar indicadores de engajamento dos alunos,<br>para que possa identificar aqueles que precisam de mais suporte ou incentivo.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-31</td>
+<td style="text-align: center;">Gerenciar uma agenda compartilhada para planejar reuniões e eventos</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero gerenciar uma agenda compartilhada,<br>para que reuniões e eventos sejam organizados de forma clara e acessível para todos os participantes.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-32</td>
+<td style="text-align: center;">Registrar atas e decisões tomadas durante as reuniões</td>
+<td style="text-align: center;">Como um Professor Participante,<br>eu quero registrar atas e decisões tomadas durante as reuniões,<br>para que haja um registro oficial e acessível das deliberações e ações definidas.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-33</td>
+<td style="text-align: center;">Acessar a plataforma.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero acessar a plataforma,<br>para que possa utilizar todas as funcionalidades disponíveis de acordo com meu perfil.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-34</td>
+<td style="text-align: center;">Visualizar os projetos interdisciplinares e seus respectivos detalhamentos.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero visualizar os projetos interdisciplinares e seus detalhes,<br>para que possa entender o escopo, objetivos e as etapas do projeto.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-35</td>
+<td style="text-align: center;">Visualizar as disciplinas que constituem cada projeto.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero acessar a lista de disciplinas que fazem parte de um projeto,<br>para que possa compreender como elas se integram no contexto interdisciplinar.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-36</td>
+<td style="text-align: center;">Visualizar o cronograma de uma determianda disciplina.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero acessar o cronograma de uma disciplina,<br>para que possa acompanhar as aulas, atividades e prazos programados.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-37</td>
+<td style="text-align: center;">Visualizar as atividades avaliativas de uma determianda disciplina.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero consultar as atividades avaliativas de uma disciplina,<br>para que saiba quais são as entregas e seus critérios de avaliação.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-38</td>
+<td style="text-align: center;">Visualizar o material de estudo de</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero acessar o material de estudo de uma disciplina,<br>para que possa me preparar adequadamente para as aulas e atividades.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US- 39</td>
+<td style="text-align: center;">Submeter uma atividade avaliativa.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero enviar uma atividade avaliativa pela plataforma,<br>para que possa cumprir os prazos e ter meu desempenho avaliado.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-40</td>
+<td style="text-align: center;">Receber notificações da aproximação de entregas de atividades.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero ser notificado sobre a aproximação de prazos de entrega,<br>para que não perca os prazos importantes.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-41</td>
+<td style="text-align: center;">Visualizar atividades a serem entregues em um calendário.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero ver minhas atividades em um calendário,<br>para que possa organizar melhor meu tempo e prioridades.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-42</td>
+<td style="text-align: center;">Visualizar as notas alcançadas nas atividades avaliativas.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero consultar minhas notas nas atividades avaliativas,<br>para que saiba como está meu desempenho acadêmico.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-43</td>
+<td style="text-align: center;">Visualizar os possíveis feedbacks deixados pelo professor.</td>
+<td style="text-align: center;">Como aluno, eu quero visualizar os possíveis feedbacks deixados pelo professor, para que eu possa entender meu desempenho e identificar pontos de melhoria.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-44</td>
+<td style="text-align: center;">Entrar em contato com um professor por um chat.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero conversar com o professor via chat,<br>para que possa tirar dúvidas ou receber orientações sobre a disciplina.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-45</td>
+<td style="text-align: center;">Entrar em contato com um colega de turma.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero entrar em contato com um colega de turma pela plataforma,<br>para que possamos colaborar em atividades ou discutir temas relacionados ao curso.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-46</td>
+<td style="text-align: center;">Consultar informação de disponibilidade dos professores.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero verificar a disponibilidade dos professores,<br>para que saiba quando posso entrar em contato com eles.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-47</td>
+<td style="text-align: center;">Consultar o horário de atendimento do professor de uma disciplina.</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero consultar o horário de atendimento de um professor,<br>para que possa planejar minha agenda e aproveitar o horário para tirar dúvidas.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-48</td>
+<td style="text-align: center;">Consultar informações gerais sobre uma determinada disciplina (objetivos, conteúdo programático, etc).</td>
+<td style="text-align: center;">Como um Aluno,<br>eu quero acessar as informações gerais de uma disciplina,<br>para que compreenda seus objetivos, conteúdos abordados e estrutura.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-49</td>
+<td style="text-align: center;">Receber notificações sobre novos projetos e eventos relacionados.</td>
+<td style="text-align: center;">Como pai ou responsável, eu quero receber notificações sobre novos projetos e eventos relacionados, para que eu possa acompanhar e participar ativamente das atividades escolares do meu filho.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-50</td>
+<td style="text-align: center;">Visualizar detalhes do projeto, como objetivos, cronograma e atividades previstas.</td>
+<td style="text-align: center;">Como Pai ou Responsável, quero visualizar os detalhes do projeto para entender o planejamento e acompanhar as atividades escolares do meu filho.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-51</td>
+<td style="text-align: center;">Participar de reuniões informativas organizadas pela escola ou professores</td>
+<td style="text-align: center;">Como um Pai ou Responsável,<br>eu quero participar de reuniões informativas organizadas pela escola ou professores,<br>para que fique atualizado sobre os objetivos, progresso ou mudanças nos projetos.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-52</td>
+<td style="text-align: center;">Acessar relatórios periódicos sobre o desempenho de notas e participação nas atividades.</td>
+<td style="text-align: center;">Como Pai ou Responsável, quero acessar relatórios de desempenho do meu filho nas atividades para monitorar seu progresso e apoiar seu aprendizado.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-53</td>
+<td style="text-align: center;">Visualizar indicadores-chave de progresso, como presença e entregas realizadas.</td>
+<td style="text-align: center;">Como pai/responsável, quero visualizar indicadores-chave de progresso, para acompanhar o desempenho e envolvimento do meu filho nas atividades escolares.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-54</td>
+<td style="text-align: center;">Receber alertas personalizados sobre prazos ou eventos importantes</td>
+<td style="text-align: center;">Como um Pai ou Responsável,<br>eu quero receber alertas personalizados sobre prazos ou eventos importantes,<br>para que não perca nenhuma data relevante ou oportunidade.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-55</td>
+<td style="text-align: center;">Enviar mensagens diretas para professores.</td>
+<td style="text-align: center;">Como um Pai ou Responsável,<br>eu quero enviar mensagens diretas para os professores,<br>para que possa esclarecer dúvidas ou discutir questões relacionadas ao desempenho ou atividades.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-56</td>
+<td style="text-align: center;">Agendar reuniões com os professores.</td>
+<td style="text-align: center;">Como um Pai ou Responsável,<br>eu quero agendar reuniões com os professores,<br>para que possa discutir assuntos importantes de forma organizada e em horários adequados.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-57</td>
+<td style="text-align: center;">Receber convites para eventos ou atividades colaborativas.</td>
+<td style="text-align: center;">Como um Pai ou Responsável,<br>eu quero receber convites para eventos ou atividades colaborativas,<br>para que esteja ciente e possa participar de atividades escolares ou extracurriculares.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-58</td>
+<td style="text-align: center;">Contribuir com recursos, materiais ou expertise para enriquecer o projeto.</td>
+<td style="text-align: center;">Como um Pai ou Responsável,<br>eu quero contribuir com recursos, materiais ou expertise para o projeto,<br>para que possa colaborar com o sucesso e o enriquecimento das atividades escolares.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-59</td>
+<td style="text-align: center;">Visualizar indicadores de acompanhamento de projetos em andamento.</td>
+<td style="text-align: center;">Como um Coordenador Pedagógico,<br>eu quero visualizar indicadores de acompanhamento dos projetos em andamento,<br>para que possa monitorar a evolução e identificar possíveis problemas ou atrasos.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-60</td>
+<td style="text-align: center;">Deixar feedbacks sobre etapas, disciplinas, conteúdos e avaliações propostas por professores.</td>
+<td style="text-align: center;">Como um Coordenador Pedagógico,<br>eu quero fornecer feedback sobre etapas, disciplinas, conteúdos e avaliações propostas pelos professores,<br>para que possa contribuir para a melhoria contínua dos projetos e processos de ensino.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-61</td>
+<td style="text-align: center;">Coletar feedback dos professores sobre os projetos.</td>
+<td style="text-align: center;">Como um Coordenador Pedagógico,<br>eu quero coletar feedback dos professores sobre os projetos,<br>para que possa avaliar o que está funcionando bem e onde ajustes podem ser necessários.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-62</td>
+<td style="text-align: center;">Criar e enviar notificações para alertar a equipe sobre prazos ou atualizações importantes.</td>
+<td style="text-align: center;">Como um Coordenador Pedagógico,<br>eu quero criar e enviar notificações para a equipe,<br>para que todos estejam cientes de prazos, mudanças ou informações importantes.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-63</td>
+<td style="text-align: center;">Monitorar o progresso dos alunos e professores em tempo real.</td>
+<td style="text-align: center;">Como um Coordenador Pedagógico,<br>eu quero acompanhar o progresso de alunos e professores em tempo real,<br>para que possa oferecer suporte imediato quando necessário.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-64</td>
+<td style="text-align: center;">Acompanhar as entregas dos projetos.</td>
+<td style="text-align: center;">Como um Coordenador Pedagógico,<br>eu quero acompanhar as entregas dos projetos,<br>para que possa verificar se os objetivos estão sendo alcançados dentro dos prazos estabelecidos.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-65</td>
+<td style="text-align: center;">Ajustar as metas e prazos conforme o andamento dos projetos.</td>
+<td style="text-align: center;">Como um Coordenador Pedagógico,<br>eu quero ajustar metas e prazos com base no progresso dos projetos,<br>para que as entregas sejam realistas e alinhadas às condições atuais.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-66</td>
+<td style="text-align: center;">Gerar relatórios de desempenho dos alunos.</td>
+<td style="text-align: center;">Como um Coordenador Pedagógico,<br>eu quero gerar relatórios detalhados sobre o desempenho dos alunos,<br>para que possa analisar e propor ações para melhorar os resultados</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-67</td>
+<td style="text-align: center;">Gerar relatórios de progresso dos projetos.</td>
+<td style="text-align: center;">Como um Coordenador Pedagógico,<br>eu quero gerar relatórios sobre o progresso dos projetos,<br>para que possa apresentar dados concretos e compartilhar o andamento com a equipe e a gestão.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-68</td>
+<td style="text-align: center;">Acessar análises sobre o engajamento dos alunos e professores.</td>
+<td style="text-align: center;">Como um Coordenador Pedagógico,<br>eu quero acessar análises detalhadas sobre o engajamento de alunos e professores,<br>para que possa identificar pontos de atenção e desenvolver estratégias de incentivo.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-69</td>
+<td style="text-align: center;">Compartilhar material utilizado com alunos e professores</td>
+<td style="text-align: center;">Como um Especialista Externo,<br>eu quero compartilhar materiais utilizados com alunos e professores,<br>para que todos tenham acesso aos recursos necessários para o aprendizado e execução do projeto.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-70</td>
+<td style="text-align: center;">Agendar reuniões e eventos</td>
+<td style="text-align: center;">Como um Especialista Externo,<br>eu quero agendar reuniões e eventos,<br>para que possa colaborar com o planejamento e engajamento nas atividades relacionadas ao projeto.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-71</td>
+<td style="text-align: center;">Acessar a orientações e dicas práticas sobre o escopo de participação.</td>
+<td style="text-align: center;">Como um Especialista Externo,<br>eu quero consultar orientações e dicas práticas sobre meu escopo de participação,<br>para que entenda claramente como devo colaborar e contribuir para o sucesso do projeto.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-72</td>
+<td style="text-align: center;">Coletar avaliações sobre a contribuição acadêmica</td>
+<td style="text-align: center;">Como um Especialista Externo,<br>eu quero coletar avaliações sobre minha contribuição acadêmica,<br>para que possa receber feedback e aprimorar minha atuação no projeto.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-73</td>
+<td style="text-align: center;">Visualizar objetivos do projeto.</td>
+<td style="text-align: center;">Como um Especialista Externo,<br>eu quero visualizar os objetivos do projeto,<br>para que possa alinhar minhas contribuições às metas estabelecidas.</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">US-74</td>
+<td style="text-align: center;">Consultar cronograma de atividades</td>
+<td style="text-align: center;">Como um Especialista Externo,<br>eu quero acessar o cronograma de atividades,<br>para que possa planejar minha participação e acompanhar as etapas do projeto.</td>
+<td style="text-align: center;">-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Data</strong></th>
+<th style="text-align: center;"><strong>Versão</strong></th>
+<th style="text-align: center;"><strong>Descrição</strong></th>
+<th style="text-align: center;"><strong>Autor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">20/11/2024</td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">Criação do documento</td>
+<td style="text-align: center;">Breno Fernandes, Breno Lucena, Storch, João, Rafael e Renan</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

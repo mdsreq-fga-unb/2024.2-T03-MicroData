@@ -1,0 +1,2593 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../prototipo/">
+      
+      
+        <link rel="next" href="../licoes/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Especificação dos Requisitos - MicroData</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#especificacao-dos-requisitos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MicroData" class="md-header__button md-logo" aria-label="MicroData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MicroData
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Especificação dos Requisitos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-MicroData" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2024.2-T03-MicroData
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MicroData" class="md-nav__button md-logo" aria-label="MicroData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MicroData
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-MicroData" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2024.2-T03-MicroData
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pagina Inicial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cenario_cliente/cenario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cenário atual do cliente e do Negócio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visão do Produto e Projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Visão do Produto e Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao_do_produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solução Proposta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estrategias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estratégias de Engenharia de Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engenharia_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engenharia de Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cronograma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cronograma e Entregas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interação entre Equipe e Cliente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitos_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos de Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dor_dod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DoR e DoD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog_produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog do Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prototipo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protótipo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Especificação dos Requisitos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Especificação dos Requisitos
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de Aceitação:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cenarios-bdds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenários BDD's:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cenários BDD's:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-07:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-realiza-o-primeiro-cadastro-de-um-microorganismo-no-banco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Realiza o Primeiro Cadastro de um Microorganismo no Banco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-o-usuario-tenta-realizar-o-cadastro-de-um-microorganismo-ja-cadastrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: O Usuário Tenta Realizar o Cadastro de um Microorganismo Já Cadastrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-08:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-acessa-os-registros-de-microorganismos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Acessa os Registros de Microorganismos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-09:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-tenta-editar-uma-informacao-de-um-microorganismo-cadastrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Tenta Editar uma Informação de um Microorganismo Cadastrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-o-usuario-tenta-desativar-um-microorganismo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: O Usuário Tenta Desativar um Microorganismo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-10:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-e-notificado-sobre-a-desativacao-do-microorganismo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário é Notificado Sobre a Desativação do Microorganismo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-o-usuario-desativa-um-microorganismo-ativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: O Usuário Desativa um Microorganismo Ativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-11:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-insere-os-niveis-de-alerta-do-microorganismo-no-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Insere os Níveis de Alerta do Microorganismo no Sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-12:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-busca-um-registro-de-microorganismo-especifico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Busca um Registro de Microorganismo Específico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-13:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-usuario-cadastra-um-ponto-de-coleta-pela-primeira-vez" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: usuário cadastra um ponto de coleta pela primeira vez
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-o-usuario-cadastra-um-ponto-de-coleta-e-ocorre-falha-no-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: O usuário cadastra um ponto de coleta e ocorre falha no registro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-o-usuario-cadastra-um-ponto-anteriormente-registrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3: O usuário cadastra um ponto anteriormente registrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-14:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-acessa-a-pagina-de-registros-para-procurar-por-um-ponto-em-especifico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O usuário acessa a página de registros para procurar por um ponto em específico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-15
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-edicao-bem-sucedida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: Edição Bem-Sucedida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-dados-invalidos-na-edicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: Dados Inválidos na Edição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-cancelamento-da-edicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3: Cancelamento da Edição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-16:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-desativacao-bem-sucedida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: Desativação Bem-Sucedida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-cancelar-a-desativacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: Cancelar a Desativação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-17:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-busca-um-registro-de-local-de-coleta-especifico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Busca um Registro de Local de Coleta Específico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-18
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-registro-bem-sucedido-da-contagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: Registro Bem-Sucedido da Contagem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-falha-no-preenchimento-de-campos-obrigatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: Falha no Preenchimento de Campos Obrigatórios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-tentativa-de-registrar-contagem-duplicada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3: Tentativa de Registrar Contagem Duplicada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-4-validacao-de-valores-invalidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 4: Validação de Valores Inválidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-19:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-listagem-bem-sucedida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: Listagem Bem-Sucedida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-nenhum-registro-encontrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: Nenhum Registro Encontrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-paginacao-da-listagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3: Paginação da Listagem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-4-ordenacao-personalizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 4: Ordenação Personalizada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-20:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-edicao-bem-sucedida_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: Edição Bem-Sucedida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-falha-ao-salvar-alteracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: Falha ao Salvar Alterações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-cancelamento-da-edicao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3: Cancelamento da Edição
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lições Aprendidas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Iterações
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Iterações
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iteracoes/iteracao34/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteração 3 e 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pbb/pbb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PBB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usm/userStoryMap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    USM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UC
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/usercase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagramação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uc/especificacoes/06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Especificação 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/entregas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entregas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de Aceitação:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cenarios-bdds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenários BDD's:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cenários BDD's:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-07:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-realiza-o-primeiro-cadastro-de-um-microorganismo-no-banco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Realiza o Primeiro Cadastro de um Microorganismo no Banco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-o-usuario-tenta-realizar-o-cadastro-de-um-microorganismo-ja-cadastrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: O Usuário Tenta Realizar o Cadastro de um Microorganismo Já Cadastrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-08:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-acessa-os-registros-de-microorganismos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Acessa os Registros de Microorganismos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-09:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-tenta-editar-uma-informacao-de-um-microorganismo-cadastrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Tenta Editar uma Informação de um Microorganismo Cadastrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-o-usuario-tenta-desativar-um-microorganismo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: O Usuário Tenta Desativar um Microorganismo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-10:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-e-notificado-sobre-a-desativacao-do-microorganismo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário é Notificado Sobre a Desativação do Microorganismo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-o-usuario-desativa-um-microorganismo-ativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: O Usuário Desativa um Microorganismo Ativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-11:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-insere-os-niveis-de-alerta-do-microorganismo-no-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Insere os Níveis de Alerta do Microorganismo no Sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-12:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-busca-um-registro-de-microorganismo-especifico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Busca um Registro de Microorganismo Específico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-13:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-usuario-cadastra-um-ponto-de-coleta-pela-primeira-vez" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: usuário cadastra um ponto de coleta pela primeira vez
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-o-usuario-cadastra-um-ponto-de-coleta-e-ocorre-falha-no-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: O usuário cadastra um ponto de coleta e ocorre falha no registro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-o-usuario-cadastra-um-ponto-anteriormente-registrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3: O usuário cadastra um ponto anteriormente registrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-14:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-acessa-a-pagina-de-registros-para-procurar-por-um-ponto-em-especifico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O usuário acessa a página de registros para procurar por um ponto em específico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-15
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-edicao-bem-sucedida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: Edição Bem-Sucedida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-dados-invalidos-na-edicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: Dados Inválidos na Edição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-cancelamento-da-edicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3: Cancelamento da Edição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-16:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-desativacao-bem-sucedida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: Desativação Bem-Sucedida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-cancelar-a-desativacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: Cancelar a Desativação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-17:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-o-usuario-busca-um-registro-de-local-de-coleta-especifico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: O Usuário Busca um Registro de Local de Coleta Específico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-18
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-registro-bem-sucedido-da-contagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: Registro Bem-Sucedido da Contagem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-falha-no-preenchimento-de-campos-obrigatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: Falha no Preenchimento de Campos Obrigatórios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-tentativa-de-registrar-contagem-duplicada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3: Tentativa de Registrar Contagem Duplicada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-4-validacao-de-valores-invalidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 4: Validação de Valores Inválidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-19:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-listagem-bem-sucedida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: Listagem Bem-Sucedida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-nenhum-registro-encontrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: Nenhum Registro Encontrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-paginacao-da-listagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3: Paginação da Listagem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-4-ordenacao-personalizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 4: Ordenação Personalizada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      US-20:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-edicao-bem-sucedida_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1: Edição Bem-Sucedida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-falha-ao-salvar-alteracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2: Falha ao Salvar Alterações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-cancelamento-da-edicao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3: Cancelamento da Edição
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="especificacao-dos-requisitos">Especificação dos Requisitos</h1>
+<h2 id="criterios-de-aceitacao">Critérios de Aceitação:</h2>
+<p>A declaração de histórias pode ser encontrada na página de <a href="https://mdsreq-fga-unb.github.io/2024.2-T03-MicroData/visao_produto_projeto/backlog_produto/">Backlog do produto</a>. Abaixo segue a relação de Histórias de usuário e critérios de aceitação:
+<img alt="" src="../../assets/criteriosAceitacao/1.png" />
+<img alt="" src="../../assets/criteriosAceitacao/2.png" />
+<img alt="" src="../../assets/criteriosAceitacao/3.png" />
+<img alt="" src="../../assets/criteriosAceitacao/4.png" />
+<img alt="" src="../../assets/criteriosAceitacao/5.png" /></p>
+<h2 id="cenarios-bdds">Cenários BDD's:</h2>
+<p>Abaixo estão os cartões e as confirmações das histórias selecionadas para o primeiro ciclo de desenvolvimento do projeto:</p>
+<!--
+## Épico 1: ACESSO E LOGIN
+
+### **US-01(CADASTRAR USUÁRIO):** Eu como usuário quero cadastrar uma conta para de minhas informações no sistema.
+
+### Cenário 1: Cadastro Completo com Sucesso
+- **Dado que** o usuário está na página de cadastro,
+- **Quando** ele preencher todos os campos obrigatórios (Nome Completo, E-mail, Senha, Confirmação de Senha e Cargo) e clicar em "Cadastrar",
+- **Então** o sistema deverá criar a conta e exibir a mensagem de sucesso: "Conta cadastrada com sucesso."
+
+---
+
+### Cenário 2: Validação de Campos Obrigatórios
+- **Dado que** o usuário tenta cadastrar uma conta,
+- **Quando** ele deixar de preencher um ou mais campos obrigatórios (Nome Completo, E-mail, Senha, Confirmação de Senha ou Cargo),
+- **Então** o sistema deverá exibir mensagens de erro específicas indicando os campos que precisam ser preenchidos.
+
+---
+
+### Cenário 3: Verificação de Dados Duplicados
+- **Dado que** o usuário tenta cadastrar uma conta com um e-mail já registrado,
+- **Quando** ele clicar em "Cadastrar",
+- **Então** o sistema deverá exibir a mensagem de erro: "E-mail já cadastrado. Tente fazer cadastro com outro e-mail ou faça login."
+
+---
+
+### Cenário 4: Validação do Formato de E-mail
+- **Dado que** o usuário tenta cadastrar uma conta,
+- **Quando** ele informar um endereço de e-mail que não segue o formato padrão (ex.: "nome@dominio.com"),
+- **Então** o sistema deverá exibir a mensagem de erro: "Insira um e-mail válido."
+
+---
+
+### Cenário 5: Confirmação de E-mail
+- **Dado que** o usuário tenta cadastrar uma conta,
+- **Quando** ele informar um endereço de e-mail válido no formato,
+- **Então** o sistema deverá enviar um e-mail de confirmação para validar a conta.
+
+---
+
+### Cenário 6: Confirmação de Senha
+- **Dado que** o usuário tenta cadastrar uma conta,
+- **Quando** ele preencher a senha e a confirmação de senha com valores diferentes,
+- **Então** o sistema deverá exibir a mensagem de erro: "As senhas não coincidem."
+
+---
+
+### Cenário 7: Validação de Senha Segura
+- **Dado que** o usuário tenta cadastrar uma conta,
+- **Quando** ele informar uma senha que não atende aos critérios (ex.: pelo menos 8 caracteres, incluindo letras, números, letras maiúsculas e caracteres especiais),
+- **Então** o sistema deverá exibir a mensagem de erro: "A senha deve conter no mínimo 8 caracteres, incluindo letras, números, letras maiúsculas e caracteres especiais."
+
+---
+
+### Cenário 8: Armazenamento Seguro
+- **Dado que** o usuário cadastrou a conta com sucesso,
+- **Quando** o sistema armazenar os dados,
+- **Então** as senhas deverão ser criptografadas no banco de dados.
+
+---
+
+
+
+### **US-02(LOGAR USUÁRIO):** Eu como usuário quero realizar login na conta cadastrada para ter acesso aos recursos e funcionalidades da plataforma.
+
+### Cenário 1: Login Bem-Sucedido
+- **Dado que** o usuário está na página de login,
+- **Quando** ele informar e-mail e senha corretos de uma conta existente,
+- **Então** o sistema deverá:
+  - Autenticar o usuário,
+  - Redirecioná-lo para a página inicial.
+
+---
+
+### Cenário 2: Validação de Campos Obrigatórios
+- **Dado que** o usuário está na página de login,
+- **Quando** ele tentar fazer login sem preencher o campo de e-mail ou senha,
+- **Então** o sistema deverá exibir uma mensagem de erro indicando o campo obrigatório ausente, como:
+  - "O campo 'E-mail' é obrigatório."
+  - "O campo 'Senha' é obrigatório."
+
+---
+
+### Cenário 3: Conta Inexistente
+- **Dado que** o usuário tenta fazer login,
+- **Quando** ele informar um e-mail que não está associado a nenhuma conta cadastrada,
+- **Então** o sistema deverá exibir a mensagem de erro: "Nenhuma conta encontrada com este e-mail."
+
+---
+
+### Cenário 4: Senha Incorreta
+- **Dado que** o usuário tenta fazer login,
+- **Quando** ele informar um e-mail válido, mas uma senha incorreta,
+- **Então** o sistema deverá exibir a mensagem de erro: "Senha incorreta. Tente novamente."
+
+---
+
+### Cenário 5: Logout
+- **Dado que** o usuário está autenticado,
+- **Quando** ele clicar no botão de logout,
+- **Então** o sistema deverá:
+  - Encerrar a sessão do usuário,
+  - Redirecioná-lo para a página inicial de login.
+
+---
+
+
+
+### **US-03(VISUALIZAR USUÁRIO):** Eu como usuário quero visualizar meus dados cadastrais para verificar as informações imputadas no sistema.
+
+### Cenário 1: Usuário Visualiza Seus Dados Cadastrais
+- **Dado que** o usuário possui uma conta cadastrada e está autenticado na plataforma,
+- **Quando** ele acessar a seção "Perfil" ou "Minha Conta",
+- **Então** o sistema deverá exibir os seguintes dados cadastrais do usuário:
+  - Nome Completo,
+  - E-mail,
+  - Cargo.
+
+---
+
+### Cenário 2: Botão para Editar Perfil
+- **Dado que** o usuário está na seção "Perfil" ou "Minha Conta",
+- **Quando** visualizar seus dados cadastrais,
+- **Então** o sistema deverá :
+- Exibir um botão "Editar Perfil",
+- Ao clicar no botão, o sistema deverá redirecionar o usuário para a página de edição de perfil.
+
+---
+
+
+
+### **US-04(EDITAR USUÁRIO):** Eu como usuário poderia editar meus dados cadastrais para gerenciamento de erros de registro e atualização de informações.
+
+### Cenário 1: Edição de Nome e Cargo com Sucesso
+- **Dado que** o usuário esteja autenticado e na página de edição de perfil,
+- **Quando** ele editar os campos "Nome Completo" e "Cargo" e clicar em "Salvar Alterações",
+- **Então** o sistema deverá:
+  - Solicitar a senha do usuário para confirmação,
+  - Validar a senha fornecida,
+  - Atualizar os dados cadastrados com sucesso,
+  - Exibir a mensagem: "Dados atualizados com sucesso."
+
+---
+
+### Cenário 2: Editar a Senha
+- **Dado que** o usuário esteja autenticado e na página de edição de senha,
+- **Quando** ele preencher os campos "Nova Senha" e "Confirmar Nova Senha",
+- **E** informar a senha antiga para validação,
+- **Então** o sistema deverá:
+  - Validar a senha antiga,
+  - Garantir que "Nova Senha" e "Confirmar Nova Senha" sejam idênticas,
+  - Atualizar a senha do usuário com sucesso,
+  - Exibir a mensagem: "Senha atualizada com sucesso."
+
+---
+
+
+
+### **US-05(DESATIVAR USUÁRIO):** Eu como usuário poderia desativar o meu cadastro no sistema para os casos de desligamento com a empresa / área.
+
+### Cenário 1: Solicitação de Desativação
+- **Dado que** o usuário está autenticado no sistema,
+- **Quando** ele acessar as configurações da conta e selecionar a opção "Desativar Conta",
+- **Então** o sistema deverá:
+  - Exibir uma mensagem de confirmação, como: "Tem certeza de que deseja desativar sua conta?",
+  - Informar as consequências da desativação, como: "Você não terá mais acesso ao sistema após a desativação.",
+  - Confirmar a solicitação do usuário,
+  - Desativar a conta imediatamente,
+  - Realizar o logout automático do usuário.
+
+---
+
+### Cenário 2: Bloqueio de Acesso
+- **Dado que** a conta do usuário foi desativada,
+- **Quando** ele tentar fazer login novamente,
+- **Então** o sistema deverá:
+  - Bloquear o acesso ao sistema,
+  - Exibir a mensagem de erro: "Sua conta foi desativada."
+
+---
+
+### Cenário 3: Reativação de Conta Após Desativação
+- **Dado que** a conta do usuário foi desativada,
+- **Quando** ele quiser acessar o sistema novamente,
+- **Então** o sistema deverá exigir que o usuário realize um novo cadastro para criar uma conta ativa.
+
+---
+
+
+
+### **US-06(RECUPERAR SENHA DE USUÁRIO):** Eu como usuário devo conseguir recuperar uma senha cadastrada para eventuais situações de esquecimento das informações de acesso.
+
+### Cenário 1: Solicitação de Recuperação de Senha
+- **Dado que** o usuário está na tela de login e não se lembra da senha,
+- **Quando** ele clicar na opção "Esqueceu a senha?" e inserir o e-mail cadastrado,
+- **Então** o sistema deverá:
+  - Verificar se o e-mail está cadastrado,
+  - Enviar um e-mail com instruções e um link para redefinir a senha,
+  - Exibir a mensagem: "Um e-mail com instruções para redefinir sua senha foi enviado."
+
+---
+
+### Cenário 2: Tentativa de Recuperação com E-mail Não Cadastrado
+- **Dado que** o usuário está na tela de recuperação de senha,
+- **Quando** ele inserir um e-mail que não está cadastrado no sistema,
+- **Então** o sistema deverá:
+  - Exibir a mensagem: "E-mail não encontrado. Verifique as informações ou cadastre-se."
+
+---
+
+### Cenário 3: Redefinição de Senha por Link Enviado
+- **Dado que** o usuário recebeu o link de redefinição de senha no e-mail,
+- **Quando** ele clicar no link e acessar a página de redefinição,
+- **Então** o sistema deverá:
+  - Permitir que o usuário insira uma nova senha,
+  - Validar os requisitos da nova senha (ex.: tamanho mínimo, letras maiúsculas, caracteres especiais, etc.),
+  - Confirmar a alteração da senha,
+  - Exibir a mensagem: "Sua senha foi redefinida com sucesso."
+
+---
+
+### Cenário 4: Expiração do Link de Redefinição
+- **Dado que** o usuário recebeu o link de redefinição de senha,
+- **Quando** ele tentar utilizá-lo após o período de validade (ex.: 24 horas),
+- **Então** o sistema deverá:
+  - Exibir a mensagem: "O link expirou. Solicite uma nova redefinição de senha."
+
+---
+
+## Épico 2: MICROORGANISMOS
+-->
+
+<h3 id="us-07"><strong>US-07:</strong></h3>
+<h3 id="cenario-1-o-usuario-realiza-o-primeiro-cadastro-de-um-microorganismo-no-banco">Cenário 1: O Usuário Realiza o Primeiro Cadastro de um Microorganismo no Banco</h3>
+<ul>
+<li><strong>Dado que</strong> um usuário deseja cadastrar um microorganismo no banco,</li>
+<li><strong>Quando</strong> ele tenta realizar um registro,</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Exigir o preenchimento dos seguintes campos obrigatórios:<ul>
+<li>Nome do microorganismo,</li>
+<li>Descrição,</li>
+<li>Limites de contagem,</li>
+<li>Níveis de alerta.</li>
+</ul>
+</li>
+<li>Validar que todos os campos obrigatórios foram preenchidos corretamente,</li>
+<li>Exibir a mensagem de sucesso: "Microorganismo cadastrado com sucesso."</li>
+</ul>
+<hr />
+<h3 id="cenario-2-o-usuario-tenta-realizar-o-cadastro-de-um-microorganismo-ja-cadastrado">Cenário 2: O Usuário Tenta Realizar o Cadastro de um Microorganismo Já Cadastrado</h3>
+<ul>
+<li><strong>Dado que</strong> um usuário tenta cadastrar um microorganismo que já está registrado no banco,</li>
+<li><strong>Quando</strong> ele tenta realizar o registro,</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Verificar se já existe um registro com o mesmo nome no banco de dados,</li>
+<li>Exibir uma mensagem de notificação: "Este microorganismo já está cadastrado no sistema. Verifique os dados ou atualize o registro existente."</li>
+</ul>
+<hr />
+<h3 id="us-08"><strong>US-08:</strong></h3>
+<h3 id="cenario-1-o-usuario-acessa-os-registros-de-microorganismos">Cenário 1: O Usuário Acessa os Registros de Microorganismos</h3>
+<ul>
+<li><strong>Dado que</strong> um usuário deseja acessar os registros de microorganismos,</li>
+<li><strong>Quando</strong> ele acessar a página de informações,</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Exibir uma listagem contendo os microorganismos cadastrados no banco,</li>
+<li>Apresentar os seguintes campos principais para cada microorganismo:<ul>
+<li>Nome do microorganismo,</li>
+<li>Descrição,</li>
+<li>Limites de contagem,</li>
+<li>Níveis de alerta.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="us-09"><strong>US-09:</strong></h3>
+<h3 id="cenario-1-o-usuario-tenta-editar-uma-informacao-de-um-microorganismo-cadastrado">Cenário 1: O Usuário Tenta Editar uma Informação de um Microorganismo Cadastrado</h3>
+<ul>
+<li><strong>Dado que</strong> um usuário acessa a informação de um microorganismo,</li>
+<li><strong>Quando</strong> ele tenta realizar uma modificação nas informações,</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Exibir um alerta de confirmação sobre a edição de dados, como: "Tem certeza de que deseja editar as informações deste microorganismo?",</li>
+<li>Permitir que o usuário confirme ou cancele a ação,</li>
+<li>Caso confirmado, salvar as alterações e exibir a mensagem: "Informações atualizadas com sucesso."</li>
+</ul>
+<hr />
+<h3 id="cenario-2-o-usuario-tenta-desativar-um-microorganismo">Cenário 2: O Usuário Tenta Desativar um Microorganismo</h3>
+<ul>
+<li><strong>Dado que</strong> um usuário acessa a informação de um microorganismo,</li>
+<li><strong>Quando</strong> ele tenta desativar o microorganismo observado,</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Exibir um alerta de confirmação sobre a desativação, como: "Tem certeza de que deseja desativar este microorganismo? Esta ação não pode ser desfeita.",</li>
+<li>Após a confirmação, desativar o microorganismo e exibir a mensagem: "Microorganismo desativado com sucesso.",</li>
+<li>Bloquear futuras edições nas informações do microorganismo desativado.</li>
+</ul>
+<hr />
+<h3 id="us-10"><strong>US-10:</strong></h3>
+<h3 id="cenario-1-o-usuario-e-notificado-sobre-a-desativacao-do-microorganismo">Cenário 1: O Usuário é Notificado Sobre a Desativação do Microorganismo</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário acessa os registros de microorganismos observados,</li>
+<li><strong>Quando</strong> o usuário realiza a desativação,</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Notificar o usuário sobre a ação realizada com a mensagem: "Tem certeza que deseja realizar essa ação? A desativação deste registro implica informar para o sistema que este microorganismo não é mais observado pelo programa."</li>
+</ul>
+<hr />
+<h3 id="cenario-2-o-usuario-desativa-um-microorganismo-ativo">Cenário 2: O Usuário Desativa um Microorganismo Ativo</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário acessa os registros de microorganismos observados,</li>
+<li><strong>Quando</strong> o usuário realiza a desativação,</li>
+<li><strong>Então</strong> o sistema deverá proceder com a desativação do microorganismo observado pelo sistema.</li>
+</ul>
+<hr />
+<h3 id="us-11"><strong>US-11:</strong></h3>
+<h3 id="cenario-1-o-usuario-insere-os-niveis-de-alerta-do-microorganismo-no-sistema">Cenário 1: O Usuário Insere os Níveis de Alerta do Microorganismo no Sistema</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário cadastra um microorganismo,</li>
+<li><strong>Quando</strong> tenta realizar um registro,</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Permitir que ele insira os níveis de alerta de contagem do microorganismo conforme os possíveis limites de contagem.</li>
+</ul>
+<hr />
+<h3 id="us-12"><strong>US-12:</strong></h3>
+<h3 id="cenario-1-o-usuario-busca-um-registro-de-microorganismo-especifico">Cenário 1: O Usuário Busca um Registro de Microorganismo Específico</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário acessa os registros de microorganismos observados,</li>
+<li><strong>Quando</strong> realiza uma busca,</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Apresentar o registro informado na base de dados.</li>
+</ul>
+<hr />
+<h3 id="us-13"><strong>US-13:</strong></h3>
+<h3 id="cenario-1-usuario-cadastra-um-ponto-de-coleta-pela-primeira-vez">Cenário 1:  usuário cadastra um ponto de coleta pela primeira vez</h3>
+<ul>
+<li><strong>Dado</strong> que o usuário cadastra um local de coleta</li>
+<li><strong>Quando</strong> acessa a página de registro </li>
+<li><strong>Então</strong> o sistema deve apresentar um formulário para preenchimento das informações de: sala, área, Local/ Processo, Método (Campo de Descrição), Frequência (Semanal, Quinzenal, Mensal), Momento da coleta (Campo de descrição), Zoneamento por proximidade (Zona 1, Zona 2, Zona 3 ou Zona 4), Zoneamento Higiênico (Alto risco, Médio risco ou Baixo risco), Ativo? (Boolean, preenchido automaticamente no mmento do registro), Data de cadastro (preenchido automaticamente no mmento do registro)</li>
+<li><strong>E</strong> receber uma mensagem de confirmação de registro caso a requisição tenha sucesso.</li>
+</ul>
+<hr />
+<h3 id="cenario-2-o-usuario-cadastra-um-ponto-de-coleta-e-ocorre-falha-no-registro">Cenário 2: O usuário cadastra um ponto de coleta e ocorre falha no registro</h3>
+<ul>
+<li><strong>Dado</strong> que o usuário cadastra um local de coleta</li>
+<li><strong>Quando</strong> acessa a página de registro e ocorre falha na requisição </li>
+<li><strong>Então</strong> o sistema deve apresentar uma mensagem de erro informando a falha da requisição.</li>
+</ul>
+<hr />
+<h3 id="cenario-3-o-usuario-cadastra-um-ponto-anteriormente-registrado">Cenário 3: O usuário cadastra um ponto anteriormente registrado</h3>
+<ul>
+<li><strong>Dado</strong> o usuário cadastra um local de coleta anteriormente registrado </li>
+<li><strong>Quando</strong> tenta concluir o registro </li>
+<li><strong>Então</strong> o sistema deve apresentar uma notificação informando que o registro já existe na base de dados.</li>
+</ul>
+<hr />
+<h3 id="us-14"><strong>US-14:</strong></h3>
+<h3 id="cenario-1-o-usuario-acessa-a-pagina-de-registros-para-procurar-por-um-ponto-em-especifico">Cenário 1: O usuário acessa a página de registros para procurar por um ponto em específico</h3>
+<ul>
+<li><strong>Dado</strong> que um usuário acessa a página de registros</li>
+<li><strong>Quando</strong> tenta buscar por um ponto de coleta</li>
+<li><strong>Então</strong> o sistema deve apresentar uma listagem com todos os pontos registrados ativos até então.</li>
+</ul>
+<hr />
+<h3 id="us-15"><strong>US-15</strong></h3>
+<h3 id="cenario-1-edicao-bem-sucedida">Cenário 1: Edição Bem-Sucedida</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário esteja autenticado e na página de edição de locais de coleta avaliados,</li>
+<li><strong>Quando</strong> realiza alterações nos dados do local e clicar em "Salvar",</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Salvar as alterações realizadas,</li>
+<li>Exibir a mensagem de confirmação: "Local de coleta atualizado com sucesso".</li>
+</ul>
+<hr />
+<h3 id="cenario-2-dados-invalidos-na-edicao">Cenário 2: Dados Inválidos na Edição</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário esteja autenticado e na página de edição de locais de coleta,</li>
+<li><strong>Quando</strong> inserir dados inválidos (ex.: Local inexistente) e clicar em "Salvar",</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Exibir uma mensagem de erro específica para o campo inválido,</li>
+<li>Não salvar as alterações.</li>
+</ul>
+<hr />
+<h3 id="cenario-3-cancelamento-da-edicao">Cenário 3: Cancelamento da Edição</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário esteja autenticado e na página de edição de locais de coleta avaliados,</li>
+<li><strong>Quando</strong> realiza alterações nos dados e clicar no botão "Cancelar",</li>
+<li><strong>Então</strong> o sistema deverá descartar as alterações realizadas e retornar o usuário para a página anterior sem modificar os dados existentes.</li>
+</ul>
+<hr />
+<h3 id="us-16"><strong>US-16:</strong></h3>
+<h3 id="cenario-1-desativacao-bem-sucedida">Cenário 1: Desativação Bem-Sucedida</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário esteja autenticado e na página de desativar local de coleta,</li>
+<li><strong>Quando</strong> ele selecionar um local de coleta e clicar no botão "Desativar",</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Atualizar o status do local de coleta para "Desativado",</li>
+<li>Exibir a mensagem de confirmação: "Local de coleta desativado com sucesso".</li>
+</ul>
+<hr />
+<h3 id="cenario-2-cancelar-a-desativacao">Cenário 2: Cancelar a Desativação</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário esteja autenticado e na página de desativar um local de coleta avaliado,</li>
+<li><strong>Quando</strong> ele clicar no botão "Cancelar" antes de confirmar a desativação,</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Manter o status do local de coleta como "Ativo",</li>
+<li>Retornar à página anterior sem efetuar nenhuma alteração.</li>
+</ul>
+<hr />
+<h3 id="us-17"><strong>US-17:</strong></h3>
+<h3 id="cenario-1-o-usuario-busca-um-registro-de-local-de-coleta-especifico">Cenário 1: O Usuário Busca um Registro de Local de Coleta Específico</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário acessa os registros de locais de coleta observados,</li>
+<li><strong>Quando</strong> realiza uma busca,</li>
+<li><strong>Então</strong> o sistema deverá apresentar o registro informado na base de dados.</li>
+</ul>
+<hr />
+<h3 id="us-18"><strong>US-18</strong></h3>
+<h3 id="cenario-1-registro-bem-sucedido-da-contagem">Cenário 1: Registro Bem-Sucedido da Contagem</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário está na página de adicionar resultados do monitoramento,</li>
+<li><strong>Quando</strong> preencher os campos obrigatórios (ex.: Data, Local de Coleta, Contagem de Microrganismos) e clicar em "Salvar",</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Registrar a contagem,</li>
+<li>Exibir a mensagem de sucesso: "Contagem registrada com sucesso."</li>
+</ul>
+<hr />
+<h3 id="cenario-2-falha-no-preenchimento-de-campos-obrigatorios">Cenário 2: Falha no Preenchimento de Campos Obrigatórios</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário tenta adicionar uma contagem de microrganismos,</li>
+<li><strong>Quando</strong> deixar de preencher algum campo obrigatório,</li>
+<li><strong>Então</strong> o sistema deverá exibir mensagens de erro específicas indicando os campos que precisam ser preenchidos.</li>
+</ul>
+<hr />
+<h3 id="cenario-3-tentativa-de-registrar-contagem-duplicada">Cenário 3: Tentativa de Registrar Contagem Duplicada</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário já registrou uma contagem para o mesmo Local e Data,</li>
+<li><strong>Quando</strong> tentar adicionar uma nova contagem com essas mesmas informações,</li>
+<li><strong>Então</strong> o sistema deverá exibir a mensagem de erro: "Já existe uma contagem registrada para este local e data."</li>
+</ul>
+<hr />
+<h3 id="cenario-4-validacao-de-valores-invalidos">Cenário 4: Validação de Valores Inválidos</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário está preenchendo o campo de contagem de microrganismos,</li>
+<li><strong>Quando</strong> informar um valor fora do intervalo permitido ou inválido (ex.: texto, números negativos),</li>
+<li><strong>Então</strong> o sistema deverá exibir a mensagem de erro: "Informe uma contagem válida."</li>
+</ul>
+<hr />
+<h3 id="us-19"><strong>US-19:</strong></h3>
+<h3 id="cenario-1-listagem-bem-sucedida">Cenário 1: Listagem Bem-Sucedida</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário acessa a página de resultados do monitoramento,</li>
+<li><strong>Quando</strong> clicar na aba "Contagens Registradas",</li>
+<li><strong>Então</strong> o sistema deverá exibir uma lista contendo os registros de contagem de microrganismos com campos como:</li>
+<li>Data,</li>
+<li>Local de Coleta,</li>
+<li>Microrganismo,</li>
+<li>Contagem.</li>
+</ul>
+<hr />
+<h3 id="cenario-2-nenhum-registro-encontrado">Cenário 2: Nenhum Registro Encontrado</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário acessa a página de resultados do monitoramento,</li>
+<li><strong>Quando</strong> não houver registros disponíveis,</li>
+<li><strong>Então</strong> o sistema deverá exibir a mensagem: "Nenhuma contagem de microrganismos registrada até o momento."</li>
+</ul>
+<hr />
+<h3 id="cenario-3-paginacao-da-listagem">Cenário 3: Paginação da Listagem</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário acessa a página de contagens registradas,</li>
+<li><strong>Quando</strong> houver mais registros do que o limite exibido por página,</li>
+<li><strong>Então</strong> o sistema deverá oferecer opções para navegar entre as páginas de resultados.</li>
+</ul>
+<hr />
+<h3 id="cenario-4-ordenacao-personalizada">Cenário 4: Ordenação Personalizada</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário acessa a lista de contagens registradas,</li>
+<li><strong>Quando</strong> selecionar um critério de ordenação (ex.: Data, Local ou Contagem),</li>
+<li><strong>Então</strong> o sistema deverá exibir os registros ordenados conforme o critério selecionado.</li>
+</ul>
+<hr />
+<h3 id="us-20"><strong>US-20:</strong></h3>
+<h3 id="cenario-1-edicao-bem-sucedida_1">Cenário 1: Edição Bem-Sucedida</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário acessa o registro de uma contagem existente,</li>
+<li><strong>Quando</strong> modificar os campos necessários e clicar em "Salvar",</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Atualizar o registro,</li>
+<li>Exibir a mensagem: "Registro atualizado com sucesso."</li>
+</ul>
+<hr />
+<h3 id="cenario-2-falha-ao-salvar-alteracoes">Cenário 2: Falha ao Salvar Alterações</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário tenta editar um registro,</li>
+<li><strong>Quando</strong> ocorrer uma falha na atualização dos dados,</li>
+<li><strong>Então</strong> o sistema deverá exibir a mensagem de erro: "Erro ao salvar as alterações. Tente novamente mais tarde."</li>
+</ul>
+<hr />
+<h3 id="cenario-3-cancelamento-da-edicao_1">Cenário 3: Cancelamento da Edição</h3>
+<ul>
+<li><strong>Dado que</strong> o usuário acessa a página de edição de um registro,</li>
+<li><strong>Quando</strong> clicar em "Cancelar" antes de salvar as alterações,</li>
+<li><strong>Então</strong> o sistema deverá:</li>
+<li>Descartar as alterações,</li>
+<li>Retornar para a página de visualização do registro sem realizar nenhuma modificação.</li>
+</ul>
+<hr />
+<!--
+### **US-21:** Eu como usuário quero deletar um limite de contagem cadastrado para melhor controle e gestão de informações
+------------------------------------------------------------------------
+
+---
+
+### **US-22(FILTRAR UM RESULTADO DE COLETA):** Eu como usuário, quero aplicar filtros aos resultados de coleta microbiológica para que eu possa localizar informações específicas de forma eficiente e realizar análises mais detalhadas.
+
+### Cenário 1: Filtro Aplicado com Sucesso
+- **Dado que** o usuário acessa a página de resultados do monitoramento,
+- **Quando** selecionar critérios como Data ou Local de Coleta e clicar em "Filtrar",
+- **Então** o sistema deverá exibir apenas os registros que correspondem aos critérios selecionados.
+
+---
+
+### Cenário 2: Nenhum Resultado Encontrado
+- **Dado que** o usuário aplica um filtro na página de resultados do monitoramento,
+- **Quando** não houver registros que atendam aos critérios selecionados,
+- **Então** o sistema deverá exibir a mensagem: "Nenhum resultado encontrado para os filtros aplicados."
+
+---
+
+### Cenário 3: Aplicação de Múltiplos Filtros
+- **Dado que** o usuário deseja localizar resultados específicos,
+- **Quando** combinar vários critérios de filtro (ex.: Local, Data e Contagem maior que um valor específico),
+- **Então** o sistema deverá exibir os registros que atendem a todos os critérios selecionados.
+
+---
+
+### Cenário 4: Limpeza de Filtros Aplicados
+- **Dado que** o usuário aplicou filtros na página de resultados do monitoramento,
+- **Quando** clicar em "Limpar Filtros",
+- **Então** o sistema deverá:
+  - Remover todos os filtros,
+  - Exibir novamente a lista completa de registros.
+
+---
+
+### **US-21(INSERIR AÇÕES CORRETIVAS):** Eu como usuário, quero inserir as ações corretivas para os resultados acima do limite de contagem de microrganismos para o registro de ações de controle mais efetivo e um processo de tomada de decisão mais eficiente.
+
+### Cenário 1: Adição de Ação Corretiva com Sucesso
+- **Dado que** o usuário acessa um registro com resultados acima do limite de contagem,
+- **Quando** preencher a descrição da ação corretiva e clicar em "Salvar",
+- **Então** o sistema deverá:
+  - Registrar a ação corretiva,
+  - Exibir a mensagem: "Ação corretiva registrada com sucesso."
+
+---
+
+### Cenário 2: Falha no Preenchimento de Informações
+- **Dado que** o usuário tenta adicionar uma ação corretiva,
+- **Quando** não preencher o campo obrigatório de descrição,
+- **Então** o sistema deverá exibir a mensagem de erro: "Descrição da ação corretiva é obrigatória."
+
+---
+
+### Cenário 3: Atualização de uma Ação Corretiva Existente
+- **Dado que** o usuário acessa uma ação corretiva já registrada,
+- **Quando** modificar a descrição ou os detalhes da ação e clicar em "Salvar",
+- **Então** o sistema deverá:
+  - Atualizar as informações da ação corretiva,
+  - Exibir a mensagem: "Ação corretiva atualizada com sucesso."
+
+---
+
+---
+
+## Épico 5: DASHBOARD
+
+### **US-23(VISUALIZAR RESULTADOS DOS PONTOS):** Como usuário, quero visualizar no dashboard os resultados de coleta para cada ponto, a fim de acompanhar a situação microbiológica de forma consolidada.
+
+### Cenário 1: O Usuário Quer Visualizar o Resultado de Coleta dos Pontos Avaliados
+- **Dado que** o usuário acessa o dashboard,
+- **Quando** quer acessar os resultados da coleta em determinado ponto,
+- **Então** o sistema deverá apresentar todas as informações de coleta no ponto desejado pelo usuário.
+
+---
+
+### Cenário 2: O Ponto Avaliado Não Está com os Resultados Disponíveis
+- **Dado que** o usuário acessa o dashboard,
+- **Quando** quer acessar os resultados da coleta em determinado ponto, mas não possui resultados naquele momento,
+- **Então** o sistema não deverá apresentar o ponto em questão como opção válida para visualização de resultados.
+
+---
+
+
+
+### **US-24(VISUALIZAR PONTOS ACIMA DO LIMITE):** Como usuário, quero que o dashboard destaque os pontos que excederem o limite de contagem, para priorizar ações corretivas.
+
+### Cenário 1: O Usuário Deseja Visualizar Pontos Acima do Limite de Contagem no Dashboard
+- **Dado que** o usuário acessa o dashboard,
+- **Quando** um ou mais valores excedem o limite de contagem pré-definido,
+- **Então** o dashboard deverá destacar visualmente esses pontos (por exemplo, com cores, ícones ou marcadores).
+
+---
+
+### Cenário 2: Ação Corretiva Sugerida para Pontos Acima do Limite
+- **Dado que** o usuário acessa o dashboard,
+- **Quando** o usuário seleciona um ponto acima do limite de contagem,
+- **Então** o sistema deverá apresentar a ação corretiva cadastrada baseada no registro apresentado.
+
+---
+
+
+### **US-25(VISUALIZAR RESULTADOS POR NÍVEL DE ALERTA):** Como usuário, quero visualizar os resultados agrupados por nível de alerta (normal, atenção, crítico), para facilitar a análise dos dados críticos.
+
+### Cenário 1: O Usuário Deseja Visualizar Resultados de Acordo com os Níveis de Alerta
+- **Dado que** o usuário acessa o dashboard,
+- **Quando** visualiza os dados no dashboard,
+- **Então** o sistema deverá exibir os resultados agrupados por nível de alerta, diferenciados por cores ou indicadores distintos.
+
+---
+
+
+
+### **US-26(FILTRAR RESULTADOS POR MICROORGANISMO):** Como usuário, quero filtrar no dashboard os resultados por tipo de microorganismo, para avaliar padrões de contagem específicos.
+
+### Cenário 1: O Usuário Filtra os Resultados por Microorganismo
+- **Dado que** o usuário acessa o dashboard,
+- **Quando** filtra os resultados por microorganismo,
+- **Então** o sistema deverá:
+  - Organizar a base de dados de referência,
+  - Apresentar todas as informações de coleta do microorganismo escolhido para análise das contagens registradas.
+
+---
+
+
+
+### **US-27(FILTRAR RESULTADOS POR LOCAL):** Como usuário, quero filtrar no dashboard os resultados por local de coleta, para analisar os dados de uma área específica.
+
+### Cenário 1: O Usuário Filtra os Resultados por Local de Coleta
+- **Dado que** o usuário acessa o dashboard,
+- **Quando** filtra os resultados por local de coleta,
+- **Então** o sistema deverá:
+  - Organizar a base de dados de referência,
+  - Apresentar todas as informações de coleta do ponto escolhido para análise das contagens registradas.
+
+---
+
+
+
+### **US-28(FILTRAR RESULTADOS POR PERÍODO):** Como usuário, quero filtrar os resultados no dashboard por período de tempo, para entender as variações ao longo de diferentes intervalos.
+
+### Cenário 1: O Usuário Informa a Data Referencial de Início
+- **Dado que** o usuário acessa o dashboard,
+- **Quando** informa uma data de referência para início da filtragem,
+- **Então** o sistema deverá:
+  - Organizar a base de dados de referência,
+  - Apresentar todas as informações de registros a partir da data informada em diante para análise das contagens registradas.
+
+---
+
+### Cenário 2: O Usuário Informa a Data Referencial de Fim
+- **Dado que** o usuário acessa o dashboard,
+- **Quando** informa uma data de referência para o final da filtragem,
+- **Então** o sistema deverá:
+  - Organizar a base de dados de referência,
+  - Apresentar todas as informações de registros até a data informada para análise das contagens registradas.
+
+---
+
+### Cenário 3: O Usuário Filtra os Resultados por Intervalo de Tempo
+- **Dado que** o usuário acessa o dashboard,
+- **Quando** filtra os resultados por intervalo de tempo (data de início e fim),
+- **Então** o sistema deverá:
+  - Organizar a base de dados de referência,
+  - Apresentar todas as informações no intervalo de tempo escolhido para análise das contagens registradas.
+
+---
+
+### Cenário 4: Limpeza de Filtros Aplicados
+- **Dado que** o usuário aplicou filtros na página de resultados do monitoramento,
+- **Quando** clicar em "Limpar Filtros",
+- **Então** o sistema deverá:
+  - Remover todos os filtros,
+  - Exibir novamente a lista completa de registros.
+
+-->
+
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Data</strong></th>
+<th style="text-align: center;"><strong>Versão</strong></th>
+<th style="text-align: center;"><strong>Descrição</strong></th>
+<th style="text-align: center;"><strong>Autor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">15/12/2024</td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">Criação do documento</td>
+<td style="text-align: center;">Breno Fernandes</td>
+</tr>
+<tr>
+<td style="text-align: center;">23/12/2024</td>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">Adicionando especificações de requisitos</td>
+<td style="text-align: center;">Breno Fernandes, Guilherme, Rafael, Renan, Breno Lucena e João</td>
+</tr>
+<tr>
+<td style="text-align: center;">26/12/2024</td>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">Adicionando nomes aos RFs nas especificações</td>
+<td style="text-align: center;">Breno Fernandes, Guilherme, Rafael, Renan, Breno Lucena e João</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
